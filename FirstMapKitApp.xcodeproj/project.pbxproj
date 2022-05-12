@@ -13,9 +13,17 @@
 		AD367F13282C47E800592D0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD367F11282C47E800592D0D /* Main.storyboard */; };
 		AD367F15282C47EB00592D0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD367F14282C47EB00592D0D /* Assets.xcassets */; };
 		AD367F18282C47EB00592D0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD367F16282C47EB00592D0D /* LaunchScreen.storyboard */; };
+		AD367F20282C508B00592D0D /* Sights.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD367F1F282C508B00592D0D /* Sights.swift */; };
+		AD367F23282C50AB00592D0D /* Sight.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD367F22282C50AB00592D0D /* Sight.swift */; };
+		AD367F25282C667400592D0D /* SightViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD367F24282C667400592D0D /* SightViews.swift */; };
+		AD367F29282D6C9300592D0D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD367F28282D6C9300592D0D /* GoogleService-Info.plist */; };
+		AD367F2B282D71D300592D0D /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD367F2A282D71D200592D0D /* ApiManager.swift */; };
+		FEF6006EDD02DF61BA2E3D2A /* Pods_FirstMapKitApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFEE70C7F68CA340388FD56 /* Pods_FirstMapKitApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30DCF0236A5E1B48B64587FA /* Pods-FirstMapKitApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstMapKitApp.debug.xcconfig"; path = "Target Support Files/Pods-FirstMapKitApp/Pods-FirstMapKitApp.debug.xcconfig"; sourceTree = "<group>"; };
+		728976EFC97C3C9A3A521BB5 /* Pods-FirstMapKitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstMapKitApp.release.xcconfig"; path = "Target Support Files/Pods-FirstMapKitApp/Pods-FirstMapKitApp.release.xcconfig"; sourceTree = "<group>"; };
 		AD367F08282C47E800592D0D /* FirstMapKitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstMapKitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD367F0B282C47E800592D0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD367F0D282C47E800592D0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +32,12 @@
 		AD367F14282C47EB00592D0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD367F17282C47EB00592D0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD367F19282C47EB00592D0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD367F1F282C508B00592D0D /* Sights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sights.swift; sourceTree = "<group>"; };
+		AD367F22282C50AB00592D0D /* Sight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sight.swift; sourceTree = "<group>"; };
+		AD367F24282C667400592D0D /* SightViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightViews.swift; sourceTree = "<group>"; };
+		AD367F28282D6C9300592D0D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AD367F2A282D71D200592D0D /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		EDFEE70C7F68CA340388FD56 /* Pods_FirstMapKitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstMapKitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEF6006EDD02DF61BA2E3D2A /* Pods_FirstMapKitApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		026602CFD98F194154C9A0E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EDFEE70C7F68CA340388FD56 /* Pods_FirstMapKitApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D0283AA16B2608AD7D2EC8E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				30DCF0236A5E1B48B64587FA /* Pods-FirstMapKitApp.debug.xcconfig */,
+				728976EFC97C3C9A3A521BB5 /* Pods-FirstMapKitApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AD367EFF282C47E800592D0D = {
 			isa = PBXGroup;
 			children = (
 				AD367F0A282C47E800592D0D /* FirstMapKitApp */,
 				AD367F09282C47E800592D0D /* Products */,
+				7D0283AA16B2608AD7D2EC8E /* Pods */,
+				026602CFD98F194154C9A0E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +90,7 @@
 		AD367F0A282C47E800592D0D /* FirstMapKitApp */ = {
 			isa = PBXGroup;
 			children = (
+				AD367F21282C50A100592D0D /* Model */,
 				AD367F0B282C47E800592D0D /* AppDelegate.swift */,
 				AD367F0D282C47E800592D0D /* SceneDelegate.swift */,
 				AD367F0F282C47E800592D0D /* ViewController.swift */,
@@ -63,8 +98,20 @@
 				AD367F14282C47EB00592D0D /* Assets.xcassets */,
 				AD367F16282C47EB00592D0D /* LaunchScreen.storyboard */,
 				AD367F19282C47EB00592D0D /* Info.plist */,
+				AD367F1F282C508B00592D0D /* Sights.swift */,
+				AD367F24282C667400592D0D /* SightViews.swift */,
+				AD367F28282D6C9300592D0D /* GoogleService-Info.plist */,
+				AD367F2A282D71D200592D0D /* ApiManager.swift */,
 			);
 			path = FirstMapKitApp;
+			sourceTree = "<group>";
+		};
+		AD367F21282C50A100592D0D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AD367F22282C50AB00592D0D /* Sight.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +121,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD367F1C282C47EB00592D0D /* Build configuration list for PBXNativeTarget "FirstMapKitApp" */;
 			buildPhases = (
+				F61D601A5BFA6FCDEF0C02FB /* [CP] Check Pods Manifest.lock */,
 				AD367F04282C47E800592D0D /* Sources */,
 				AD367F05282C47E800592D0D /* Frameworks */,
 				AD367F06282C47E800592D0D /* Resources */,
+				517BCF7560BF594A81267496 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD367F18282C47EB00592D0D /* LaunchScreen.storyboard in Resources */,
+				AD367F29282D6C9300592D0D /* GoogleService-Info.plist in Resources */,
 				AD367F15282C47EB00592D0D /* Assets.xcassets in Resources */,
 				AD367F13282C47E800592D0D /* Main.storyboard in Resources */,
 			);
@@ -133,13 +183,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		517BCF7560BF594A81267496 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirstMapKitApp/Pods-FirstMapKitApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirstMapKitApp/Pods-FirstMapKitApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FirstMapKitApp/Pods-FirstMapKitApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F61D601A5BFA6FCDEF0C02FB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FirstMapKitApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AD367F04282C47E800592D0D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD367F25282C667400592D0D /* SightViews.swift in Sources */,
 				AD367F10282C47E800592D0D /* ViewController.swift in Sources */,
+				AD367F20282C508B00592D0D /* Sights.swift in Sources */,
+				AD367F2B282D71D300592D0D /* ApiManager.swift in Sources */,
 				AD367F0C282C47E800592D0D /* AppDelegate.swift in Sources */,
+				AD367F23282C50AB00592D0D /* Sight.swift in Sources */,
 				AD367F0E282C47E800592D0D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +380,7 @@
 		};
 		AD367F1D282C47EB00592D0D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30DCF0236A5E1B48B64587FA /* Pods-FirstMapKitApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -297,6 +394,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,6 +410,7 @@
 		};
 		AD367F1E282C47EB00592D0D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 728976EFC97C3C9A3A521BB5 /* Pods-FirstMapKitApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -325,6 +424,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
