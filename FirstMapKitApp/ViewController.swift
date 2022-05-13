@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     let locationManager = CLLocationManager()
     var initialLocation = CLLocation(latitude: 54.7064900, longitude: 20.5109500)
-    var sights = [Sight]()
+    //var sights = [Sight]()
     
     override func viewDidLoad()  {
         super.viewDidLoad()
@@ -26,16 +26,6 @@ class ViewController: UIViewController {
         mapView.delegate = self
         mapView.register(SightView.self,
                          forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)//используем пока дефолтный идентификатор, потому что у нас класс с одним типом аннотаций.
-       
-     
-        Task {
-            
-                sights = await ApiManager.shared.fetchData()
-            
-        }
-        print(sights)
-       // print("Test \(ApiManager.shared.getSights())")
-
     }
     
    
@@ -80,12 +70,18 @@ extension ViewController: CLLocationManagerDelegate {
     }
     //MARK: Добавляем 1 пробный пин вручную
     private func createPins() {
-        let cathedral = Sights(
-            title: "Cathedral",
-            locationName: "Immanuel Kant Island",
-            type: "church",
-            coordinate: CLLocationCoordinate2D(latitude: 54.706443, longitude: 20.511817))
-        mapView.addAnnotation(cathedral)
+       ApiManager.shared.fetchData(completion: { sights in
+           for sight in sights {
+               let annotation = Sights(
+                //id: sight.id,
+                title: sight.title,
+                locationName: sight.locationName,
+                type: sight.type,
+                coordinate: CLLocationCoordinate2D(latitude: sight.coordinate.latitude, longitude: sight.coordinate.longitude)
+               )
+               self.mapView.addAnnotation(annotation)
+           }
+       })
     }
 }
 

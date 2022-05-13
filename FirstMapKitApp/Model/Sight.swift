@@ -13,5 +13,6 @@ struct Sight: Identifiable {
     let id: String
     let title: String
     let type: String
-   // var coordinate: GeoPoint
+    let locationName: String
+    let coordinate: GeoPoint
 }

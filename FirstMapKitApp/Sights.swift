@@ -50,7 +50,9 @@ class Sights: NSObject, MKAnnotation {
         }
         switch name {
         case "church":
-            return UIImage(named: "cathedral")!
+            return UIImage(named: "church")!
+        case "museum":
+            return UIImage(named: "museum")!
         default:
             return UIImage(named: "default")!
         }
