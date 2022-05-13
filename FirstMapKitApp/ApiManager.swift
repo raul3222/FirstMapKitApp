@@ -10,41 +10,50 @@ import Firebase
 
 class ApiManager {
     static let shared = ApiManager()
-    private init() {}
-    var sights = [SightModel]()
-//    func getSights() -> [SightModel] {
-//        let db = Firestore.firestore()
-//        db.collection("sight").getDocuments { queary, err in
-//            guard err == nil else { return }
-//            guard let queary = queary else { return }
-//            self.sights = queary.documents.map({ item in
-//                return SightModel(
-//                    id: item.documentID,
-//                    title: item["title"] as? String ?? "",
-//                    type: item["type"] as? String ?? "",
-//                    coordinate: item["coordinate"] as? GeoPoint ?? GeoPoint(latitude: 10.0, longitude: 20.0))
-//            })
-//        }
-//        return sights
-//    }
-    func getSight() -> [SightModel] {
+   // private init() {}
+    var sights: [Sight] = []
+    
+    func getSights() async -> [Sight] {
             let db = Firestore.firestore()
             db.collection("sight").getDocuments { queary, err in
                 guard err == nil else { return }
                 guard let queary = queary else { return }
-                for doc in queary.documents {
-                    //print (doc.data())
-                  let test = SightModel(
-                        id: doc.documentID,
-                        title: doc["title"] as? String ?? "",
-                        type: doc["type"] as? String ?? "",
-                        coordinate: doc["coordinate"] as? GeoPoint ?? GeoPoint(latitude: 10.0, longitude: 20.0)
-                        )
-                    self.sights.append(test)
-                }
+
+                    for doc in queary.documents {
+                        //print (doc.data()) // Если вызвать эту строку, то все работает
+                        // А Здесь уже не работает
+                        self.sights.append(Sight(
+                            id: doc.documentID,
+                            title: doc["title"] as? String ?? "",
+                            type: doc["type"] as? String ?? ""))
+                    }
             }
         return sights
     }
+    func fetchData() async -> [Sight] {
+        let array = await getSights()
+        return array
+    }
+
+//    func getSights() -> [Sight] {
+//        let db = Firestore.firestore()
+//        db.collection("sight").getDocuments { queary, err in
+//            guard err == nil else { return }
+//            guard let queary = queary else { return }
+//            DispatchQueue.main.async {
+//                self.sights = queary.documents.map({ item in
+//                    return Sight(
+//                        id: item.documentID,
+//                        title: item["title"] as? String ?? "",
+//                        type: item["type"] as? String ?? ""
+//                       // coordinate: item["coordinate"] as? GeoPoint ?? GeoPoint(latitude: 42.543212, longitude: 74.215323))
+//                        )
+//                })
+//
+//            }
+//        }
+//        return sights
+//    }
 
 
 }

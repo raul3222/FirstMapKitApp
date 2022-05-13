@@ -16,8 +16,9 @@ class ViewController: UIViewController {
     
     let locationManager = CLLocationManager()
     var initialLocation = CLLocation(latitude: 54.7064900, longitude: 20.5109500)
-    var sights = [SightModel]()
-    override func viewDidLoad() {
+    var sights = [Sight]()
+    
+    override func viewDidLoad()  {
         super.viewDidLoad()
         configureCoreLocation()
         setZoomRange()
@@ -25,14 +26,22 @@ class ViewController: UIViewController {
         mapView.delegate = self
         mapView.register(SightView.self,
                          forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)//используем пока дефолтный идентификатор, потому что у нас класс с одним типом аннотаций.
-//        sights = ApiManager.shared.getSights()
-//        print("Test \(sights.count)")
-        
-        
-        
+       
+     
+        Task {
+            
+                sights = await ApiManager.shared.fetchData()
+            
+        }
+        print(sights)
+       // print("Test \(ApiManager.shared.getSights())")
+
     }
+    
+   
     @IBAction func currentLocationPressed(_ sender: Any) {
         mapView.centerToLocation(location: initialLocation)
+        
     }
 }
 //MARK: Определяем текущие координаты

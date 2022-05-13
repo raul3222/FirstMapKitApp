@@ -9,9 +9,9 @@ import Foundation
 import MapKit
 import Firebase
 
-struct SightModel: Identifiable {
-    var id: String
-    var title: String
-    var type: String
-    var coordinate: GeoPoint
+struct Sight: Identifiable {
+    let id: String
+    let title: String
+    let type: String
+   // var coordinate: GeoPoint
 }
