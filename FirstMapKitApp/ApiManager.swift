@@ -17,7 +17,7 @@ class ApiManager {
 //       
 //    }
     
-    func fetchData(completion: @escaping([Sight]) -> Void) -> [Sight]{
+    func fetchData(completion: @escaping([Sight]) -> ()) -> [Sight]{
         let db = Firestore.firestore()
         db.collection("sight").getDocuments { queary, err in
             guard err == nil else { return }
@@ -33,8 +33,12 @@ class ApiManager {
                         locationName: doc["locationName"] as? String ?? "",
                         coordinate: doc["coordinate"] as? GeoPoint ?? GeoPoint(latitude: 42.543212, longitude: 74.215323)
                     ))
+                   
+                    
                 }
-            completion(self.sights)
+            DispatchQueue.global().async {
+                completion(self.sights)
+            }
             
         }
     

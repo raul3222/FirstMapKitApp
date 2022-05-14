@@ -10,13 +10,13 @@ import MapKit
 import Firebase
 import FirebaseFirestore
 
-class ViewController: UIViewController {
+class mapViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     
     let locationManager = CLLocationManager()
     var initialLocation = CLLocation(latitude: 54.7064900, longitude: 20.5109500)
-    //var sights = [Sight]()
+    var sights: [Sight]!
     
     override func viewDidLoad()  {
         super.viewDidLoad()
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     }
 }
 //MARK: Определяем текущие координаты
-extension ViewController: CLLocationManagerDelegate {
+extension mapViewController: CLLocationManagerDelegate {
     //MARK: Следующие 2 метода обязательные
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last!
@@ -70,18 +70,30 @@ extension ViewController: CLLocationManagerDelegate {
     }
     //MARK: Добавляем 1 пробный пин вручную
     private func createPins() {
-       ApiManager.shared.fetchData(completion: { sights in
-           for sight in sights {
-               let annotation = Sights(
-                //id: sight.id,
-                title: sight.title,
-                locationName: sight.locationName,
-                type: sight.type,
-                coordinate: CLLocationCoordinate2D(latitude: sight.coordinate.latitude, longitude: sight.coordinate.longitude)
-               )
-               self.mapView.addAnnotation(annotation)
-           }
-       })
+                   for sight in sights {
+                       let annotation = Sights(
+                        //id: sight.id,
+                        title: sight.title,
+                        locationName: sight.locationName,
+                        type: sight.type,
+                        coordinate: CLLocationCoordinate2D(latitude: sight.coordinate.latitude, longitude: sight.coordinate.longitude)
+                       )
+                       self.mapView.addAnnotation(annotation)
+                   }
+        
+        
+//       ApiManager.shared.fetchData(completion: { sights in
+//           for sight in sights {
+//               let annotation = Sights(
+//                //id: sight.id,
+//                title: sight.title,
+//                locationName: sight.locationName,
+//                type: sight.type,
+//                coordinate: CLLocationCoordinate2D(latitude: sight.coordinate.latitude, longitude: sight.coordinate.longitude)
+//               )
+//               self.mapView.addAnnotation(annotation)
+//           }
+//       })
     }
 }
 
@@ -98,7 +110,7 @@ private extension MKMapView {
 }
 
 //MARK: Настраиваем внешний вид пина, чтобы при нажатии открывалось окошко
-extension ViewController: MKMapViewDelegate {
+extension mapViewController: MKMapViewDelegate {
     //Обрабатываем нажатие кнопки i во всплывающем окне
     func mapView(_ mapView: MKMapView,
                  annotationView view: MKAnnotationView,

@@ -53,6 +53,8 @@ class Sights: NSObject, MKAnnotation {
             return UIImage(named: "church")!
         case "museum":
             return UIImage(named: "museum")!
+        case "park":
+            return UIImage(named: "park")!
         default:
             return UIImage(named: "default")!
         }

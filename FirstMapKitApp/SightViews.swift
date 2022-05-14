@@ -41,10 +41,11 @@ class SightView: MKAnnotationView {
       //rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
         let mapsButton = UIButton(frame: CGRect(
           origin: CGPoint.zero,
-          size: CGSize(width: 48, height: 48)))
+          size: CGSize(width: 30, height: 30)))
         mapsButton.setBackgroundImage(UIImage(named: "Map"), for: .normal)
         rightCalloutAccessoryView = mapsButton
       image = sight.image
+    
     }
   }
 }

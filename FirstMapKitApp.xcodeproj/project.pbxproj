@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		AD367F0C282C47E800592D0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD367F0B282C47E800592D0D /* AppDelegate.swift */; };
 		AD367F0E282C47E800592D0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD367F0D282C47E800592D0D /* SceneDelegate.swift */; };
-		AD367F10282C47E800592D0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD367F0F282C47E800592D0D /* ViewController.swift */; };
+		AD367F10282C47E800592D0D /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD367F0F282C47E800592D0D /* mapViewController.swift */; };
 		AD367F13282C47E800592D0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD367F11282C47E800592D0D /* Main.storyboard */; };
 		AD367F15282C47EB00592D0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD367F14282C47EB00592D0D /* Assets.xcassets */; };
 		AD367F18282C47EB00592D0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD367F16282C47EB00592D0D /* LaunchScreen.storyboard */; };
@@ -18,6 +18,8 @@
 		AD367F25282C667400592D0D /* SightViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD367F24282C667400592D0D /* SightViews.swift */; };
 		AD367F29282D6C9300592D0D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD367F28282D6C9300592D0D /* GoogleService-Info.plist */; };
 		AD367F2B282D71D300592D0D /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD367F2A282D71D200592D0D /* ApiManager.swift */; };
+		ADE926012830305F00F8EDA3 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE926002830305F00F8EDA3 /* ListTableViewController.swift */; };
+		ADE9260428303E5A00F8EDA3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE9260328303E5A00F8EDA3 /* TabBarController.swift */; };
 		FEF6006EDD02DF61BA2E3D2A /* Pods_FirstMapKitApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFEE70C7F68CA340388FD56 /* Pods_FirstMapKitApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +29,7 @@
 		AD367F08282C47E800592D0D /* FirstMapKitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstMapKitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD367F0B282C47E800592D0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD367F0D282C47E800592D0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AD367F0F282C47E800592D0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD367F0F282C47E800592D0D /* mapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
 		AD367F12282C47E800592D0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD367F14282C47EB00592D0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD367F17282C47EB00592D0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +39,8 @@
 		AD367F24282C667400592D0D /* SightViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightViews.swift; sourceTree = "<group>"; };
 		AD367F28282D6C9300592D0D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AD367F2A282D71D200592D0D /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		ADE926002830305F00F8EDA3 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		ADE9260328303E5A00F8EDA3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		EDFEE70C7F68CA340388FD56 /* Pods_FirstMapKitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstMapKitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -90,10 +94,10 @@
 		AD367F0A282C47E800592D0D /* FirstMapKitApp */ = {
 			isa = PBXGroup;
 			children = (
+				ADE9260228303DDD00F8EDA3 /* ViewControllers */,
 				AD367F21282C50A100592D0D /* Model */,
 				AD367F0B282C47E800592D0D /* AppDelegate.swift */,
 				AD367F0D282C47E800592D0D /* SceneDelegate.swift */,
-				AD367F0F282C47E800592D0D /* ViewController.swift */,
 				AD367F11282C47E800592D0D /* Main.storyboard */,
 				AD367F14282C47EB00592D0D /* Assets.xcassets */,
 				AD367F16282C47EB00592D0D /* LaunchScreen.storyboard */,
@@ -112,6 +116,16 @@
 				AD367F22282C50AB00592D0D /* Sight.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		ADE9260228303DDD00F8EDA3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AD367F0F282C47E800592D0D /* mapViewController.swift */,
+				ADE926002830305F00F8EDA3 /* ListTableViewController.swift */,
+				ADE9260328303E5A00F8EDA3 /* TabBarController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,9 +245,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD367F25282C667400592D0D /* SightViews.swift in Sources */,
-				AD367F10282C47E800592D0D /* ViewController.swift in Sources */,
+				AD367F10282C47E800592D0D /* mapViewController.swift in Sources */,
 				AD367F20282C508B00592D0D /* Sights.swift in Sources */,
+				ADE9260428303E5A00F8EDA3 /* TabBarController.swift in Sources */,
 				AD367F2B282D71D300592D0D /* ApiManager.swift in Sources */,
+				ADE926012830305F00F8EDA3 /* ListTableViewController.swift in Sources */,
 				AD367F0C282C47E800592D0D /* AppDelegate.swift in Sources */,
 				AD367F23282C50AB00592D0D /* Sight.swift in Sources */,
 				AD367F0E282C47E800592D0D /* SceneDelegate.swift in Sources */,
