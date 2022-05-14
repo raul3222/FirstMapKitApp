@@ -28,8 +28,6 @@ class TabBarController: UITabBarController {
                     listVC.sights = sights
                     mapVC.sights = sights
                 
-                    
-                
                })
         
     }

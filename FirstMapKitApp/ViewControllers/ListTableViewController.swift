@@ -9,11 +9,22 @@ import UIKit
 import MapKit
 
 class ListTableViewController: UITableViewController {
-    var sights: [Sight]!
+    var isReceived = false
+    var sights: [Sight]! {
+        didSet {
+            isReceived = true
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                self.activityIndicator?.stopAnimating()
+            }
+            
+        }
+    }
+   
     private var activityIndicator: UIActivityIndicatorView?
     override func viewDidLoad() {
         super.viewDidLoad()
-        activityIndicator = showActivityIndicator(in: view)
+        
     }
     
     private func showActivityIndicator(in view: UIView) -> UIActivityIndicatorView {
@@ -39,7 +50,7 @@ class ListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        isReceived ? sights.count : 1
     }
 
     
@@ -48,9 +59,16 @@ class ListTableViewController: UITableViewController {
         
         var content = cell.defaultContentConfiguration()
         
-
-        content.text = ""
-        cell.contentConfiguration = content
+        if !isReceived {
+            activityIndicator = showActivityIndicator(in: view)
+        } else {
+            
+            content.text = sights[indexPath.row].title
+            cell.contentConfiguration = content
+            
+            
+        }
+        
         return cell
     }
     
