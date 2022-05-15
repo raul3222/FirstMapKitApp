@@ -8,6 +8,7 @@
 import UIKit
 
 class CollectionViewController: UIViewController {
+    @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var cardLabel: UILabel!
     var isReceived = false
     var sights: [Sight]! {
@@ -25,6 +26,8 @@ class CollectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        backgroundImage.image = UIImage(named: "background")
+        backgroundImage.alpha = 0.3
         
         view.addSubview(cardCollectionView)
         

@@ -8,20 +8,18 @@
 import UIKit
 
 class CardView: UITableViewCell {
-
+    
     @IBOutlet weak var sightImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-   
-     func configure(with sight: Sight) {
+    
+    func configure(with sight: Sight) {
         self.titleLabel.text = sight.title
-         
-         guard let image = sight.imageSrc else { return }
-         fetchImage(with: image)
-         activityIndicator.stopAnimating()
-        // var image = UIImage(named: "default")
         
+        guard let image = sight.imageSrc else { return }
+        fetchImage(with: image)
+        activityIndicator.stopAnimating()
     }
     
     private func fetchImage(with name: String) {
@@ -31,7 +29,4 @@ class CardView: UITableViewCell {
             self.sightImage.image = pict
         }
     }
-    
-    
-
 }

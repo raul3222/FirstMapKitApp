@@ -8,28 +8,24 @@
 import UIKit
 
 class TabBarController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupViewControllers()
-        // Do any additional setup after loading the view.
     }
     
     private func setupViewControllers() {
-        guard let cardVC = viewControllers?.last as? CollectionViewController else { return }
-        guard let mapVC = viewControllers?.first as? MapViewController else { return }
+        guard let cardVC = viewControllers?.first as? CollectionViewController else { return }
+        guard let mapVC = viewControllers?.last as? MapViewController else { return }
         var sights: [Sight] = []
-            ApiManager.shared.fetchData(completion: { item in
-                   for sight in item {
-                       sights.append(sight)
-                   }
-               
-                    cardVC.sights = sights
-                    mapVC.sights = sights
-                
-               })
-        
+        ApiManager.shared.fetchData{ items in
+            for sight in items {
+                sights.append(sight)
+            }
+            
+            cardVC.sights = sights
+            mapVC.sights = sights
+        }
     }
-
 }
