@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		AD367F0C282C47E800592D0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD367F0B282C47E800592D0D /* AppDelegate.swift */; };
 		AD367F0E282C47E800592D0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD367F0D282C47E800592D0D /* SceneDelegate.swift */; };
-		AD367F10282C47E800592D0D /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD367F0F282C47E800592D0D /* mapViewController.swift */; };
+		AD367F10282C47E800592D0D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD367F0F282C47E800592D0D /* MapViewController.swift */; };
 		AD367F13282C47E800592D0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD367F11282C47E800592D0D /* Main.storyboard */; };
 		AD367F15282C47EB00592D0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD367F14282C47EB00592D0D /* Assets.xcassets */; };
 		AD367F18282C47EB00592D0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD367F16282C47EB00592D0D /* LaunchScreen.storyboard */; };
@@ -19,6 +19,10 @@
 		AD367F29282D6C9300592D0D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD367F28282D6C9300592D0D /* GoogleService-Info.plist */; };
 		AD367F2B282D71D300592D0D /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD367F2A282D71D200592D0D /* ApiManager.swift */; };
 		ADDC6F3B28315A3E004F5EBA /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC6F3A28315A3E004F5EBA /* CardView.swift */; };
+		ADDC6F3D28319310004F5EBA /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC6F3C28319310004F5EBA /* CollectionViewController.swift */; };
+		ADDC6F3F283194E1004F5EBA /* CardCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC6F3E283194E1004F5EBA /* CardCollectionView.swift */; };
+		ADDC6F41283195AC004F5EBA /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC6F40283195AC004F5EBA /* CardCollectionViewCell.swift */; };
+		ADDC6F432831A346004F5EBA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC6F422831A346004F5EBA /* Constants.swift */; };
 		ADE926012830305F00F8EDA3 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE926002830305F00F8EDA3 /* ListTableViewController.swift */; };
 		ADE9260428303E5A00F8EDA3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE9260328303E5A00F8EDA3 /* TabBarController.swift */; };
 		FEF6006EDD02DF61BA2E3D2A /* Pods_FirstMapKitApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFEE70C7F68CA340388FD56 /* Pods_FirstMapKitApp.framework */; };
@@ -30,7 +34,7 @@
 		AD367F08282C47E800592D0D /* FirstMapKitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstMapKitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD367F0B282C47E800592D0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD367F0D282C47E800592D0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AD367F0F282C47E800592D0D /* mapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
+		AD367F0F282C47E800592D0D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		AD367F12282C47E800592D0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD367F14282C47EB00592D0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD367F17282C47EB00592D0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -41,6 +45,10 @@
 		AD367F28282D6C9300592D0D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AD367F2A282D71D200592D0D /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		ADDC6F3A28315A3E004F5EBA /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		ADDC6F3C28319310004F5EBA /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		ADDC6F3E283194E1004F5EBA /* CardCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionView.swift; sourceTree = "<group>"; };
+		ADDC6F40283195AC004F5EBA /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		ADDC6F422831A346004F5EBA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ADE926002830305F00F8EDA3 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		ADE9260328303E5A00F8EDA3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		EDFEE70C7F68CA340388FD56 /* Pods_FirstMapKitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstMapKitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				AD367F22282C50AB00592D0D /* Sight.swift */,
+				ADDC6F422831A346004F5EBA /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -125,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				ADDC6F3A28315A3E004F5EBA /* CardView.swift */,
+				ADDC6F3E283194E1004F5EBA /* CardCollectionView.swift */,
+				ADDC6F40283195AC004F5EBA /* CardCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -132,9 +143,10 @@
 		ADE9260228303DDD00F8EDA3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				AD367F0F282C47E800592D0D /* mapViewController.swift */,
+				AD367F0F282C47E800592D0D /* MapViewController.swift */,
 				ADE926002830305F00F8EDA3 /* ListTableViewController.swift */,
 				ADE9260328303E5A00F8EDA3 /* TabBarController.swift */,
+				ADDC6F3C28319310004F5EBA /* CollectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -256,13 +268,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD367F25282C667400592D0D /* SightViews.swift in Sources */,
-				AD367F10282C47E800592D0D /* mapViewController.swift in Sources */,
+				AD367F10282C47E800592D0D /* MapViewController.swift in Sources */,
 				AD367F20282C508B00592D0D /* Sights.swift in Sources */,
 				ADE9260428303E5A00F8EDA3 /* TabBarController.swift in Sources */,
+				ADDC6F3F283194E1004F5EBA /* CardCollectionView.swift in Sources */,
+				ADDC6F3D28319310004F5EBA /* CollectionViewController.swift in Sources */,
 				ADDC6F3B28315A3E004F5EBA /* CardView.swift in Sources */,
+				ADDC6F41283195AC004F5EBA /* CardCollectionViewCell.swift in Sources */,
 				AD367F2B282D71D300592D0D /* ApiManager.swift in Sources */,
 				ADE926012830305F00F8EDA3 /* ListTableViewController.swift in Sources */,
 				AD367F0C282C47E800592D0D /* AppDelegate.swift in Sources */,
+				ADDC6F432831A346004F5EBA /* Constants.swift in Sources */,
 				AD367F23282C50AB00592D0D /* Sight.swift in Sources */,
 				AD367F0E282C47E800592D0D /* SceneDelegate.swift in Sources */,
 			);

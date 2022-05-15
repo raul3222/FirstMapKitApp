@@ -17,15 +17,15 @@ class TabBarController: UITabBarController {
     }
     
     private func setupViewControllers() {
-        guard let listVC = viewControllers?.first as? ListTableViewController else { return }
-        guard let mapVC = viewControllers?.last as? mapViewController else { return }
+        guard let cardVC = viewControllers?.last as? CollectionViewController else { return }
+        guard let mapVC = viewControllers?.first as? MapViewController else { return }
         var sights: [Sight] = []
             ApiManager.shared.fetchData(completion: { item in
                    for sight in item {
                        sights.append(sight)
                    }
                
-                    listVC.sights = sights
+                    cardVC.sights = sights
                     mapVC.sights = sights
                 
                })

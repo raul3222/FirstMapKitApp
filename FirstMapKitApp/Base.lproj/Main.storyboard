@@ -35,13 +35,57 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="89S-dm-yzD" kind="relationship" relationship="viewControllers" id="C2s-tR-y2u"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="GTq-OH-59G"/>
+                        <segue destination="tio-9Z-lXf" kind="relationship" relationship="viewControllers" id="oQt-1w-Vby"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rrE-QX-xG4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1804" y="161"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="61R-rv-6mZ">
+            <objects>
+                <viewController id="tio-9Z-lXf" customClass="CollectionViewController" customModule="FirstMapKitApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v1C-6a-1P4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Карточки мест" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jwj-zW-jse">
+                                <rect key="frame" x="40" y="162" width="161" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEn-hb-yZC">
+                                <rect key="frame" x="15" y="93" width="48" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="5h6-wL-8Nu"/>
+                                    <constraint firstAttribute="height" constant="31" id="wPV-11-Q2F"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="list.dash" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large" weight="bold"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1EQ-9D-cbZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jwj-zW-jse" firstAttribute="leading" secondItem="1EQ-9D-cbZ" secondAttribute="leading" constant="40" id="CTw-AH-hAf"/>
+                            <constraint firstItem="dEn-hb-yZC" firstAttribute="top" secondItem="1EQ-9D-cbZ" secondAttribute="top" constant="5" id="L2G-mh-rge"/>
+                            <constraint firstItem="dEn-hb-yZC" firstAttribute="leading" secondItem="1EQ-9D-cbZ" secondAttribute="leading" constant="15" id="PXY-dx-qUn"/>
+                            <constraint firstItem="Jwj-zW-jse" firstAttribute="top" secondItem="1EQ-9D-cbZ" secondAttribute="top" constant="74" id="ZMz-qJ-gxy"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="sIq-dC-XHC"/>
+                    <connections>
+                        <outlet property="cardLabel" destination="Jwj-zW-jse" id="3cF-Vg-UVR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0f8-2m-aL4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1755.072463768116" y="-538.39285714285711"/>
         </scene>
         <!--List Table View Controller-->
         <scene sceneID="gNb-SL-ds1">
@@ -109,7 +153,7 @@
             <objects>
                 <viewController id="QLQ-wo-PIX" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ztN-Q9-qe0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="ch0-FZ-s7A"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -138,7 +182,7 @@
         <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="mapViewController" customModule="FirstMapKitApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="FirstMapKitApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
