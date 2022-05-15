@@ -18,6 +18,7 @@
 		AD367F25282C667400592D0D /* SightViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD367F24282C667400592D0D /* SightViews.swift */; };
 		AD367F29282D6C9300592D0D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD367F28282D6C9300592D0D /* GoogleService-Info.plist */; };
 		AD367F2B282D71D300592D0D /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD367F2A282D71D200592D0D /* ApiManager.swift */; };
+		ADDC6F3B28315A3E004F5EBA /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC6F3A28315A3E004F5EBA /* CardView.swift */; };
 		ADE926012830305F00F8EDA3 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE926002830305F00F8EDA3 /* ListTableViewController.swift */; };
 		ADE9260428303E5A00F8EDA3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE9260328303E5A00F8EDA3 /* TabBarController.swift */; };
 		FEF6006EDD02DF61BA2E3D2A /* Pods_FirstMapKitApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFEE70C7F68CA340388FD56 /* Pods_FirstMapKitApp.framework */; };
@@ -39,6 +40,7 @@
 		AD367F24282C667400592D0D /* SightViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightViews.swift; sourceTree = "<group>"; };
 		AD367F28282D6C9300592D0D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AD367F2A282D71D200592D0D /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		ADDC6F3A28315A3E004F5EBA /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		ADE926002830305F00F8EDA3 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		ADE9260328303E5A00F8EDA3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		EDFEE70C7F68CA340388FD56 /* Pods_FirstMapKitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstMapKitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +96,7 @@
 		AD367F0A282C47E800592D0D /* FirstMapKitApp */ = {
 			isa = PBXGroup;
 			children = (
+				ADDC6F3928315A1D004F5EBA /* View */,
 				ADE9260228303DDD00F8EDA3 /* ViewControllers */,
 				AD367F21282C50A100592D0D /* Model */,
 				AD367F0B282C47E800592D0D /* AppDelegate.swift */,
@@ -116,6 +119,14 @@
 				AD367F22282C50AB00592D0D /* Sight.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		ADDC6F3928315A1D004F5EBA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ADDC6F3A28315A3E004F5EBA /* CardView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		ADE9260228303DDD00F8EDA3 /* ViewControllers */ = {
@@ -248,6 +259,7 @@
 				AD367F10282C47E800592D0D /* mapViewController.swift in Sources */,
 				AD367F20282C508B00592D0D /* Sights.swift in Sources */,
 				ADE9260428303E5A00F8EDA3 /* TabBarController.swift in Sources */,
+				ADDC6F3B28315A3E004F5EBA /* CardView.swift in Sources */,
 				AD367F2B282D71D300592D0D /* ApiManager.swift in Sources */,
 				ADE926012830305F00F8EDA3 /* ListTableViewController.swift in Sources */,
 				AD367F0C282C47E800592D0D /* AppDelegate.swift in Sources */,

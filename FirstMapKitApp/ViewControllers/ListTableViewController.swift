@@ -15,7 +15,7 @@ class ListTableViewController: UITableViewController {
             isReceived = true
             DispatchQueue.main.async {
                 self.tableView.reloadData()
-                self.activityIndicator?.stopAnimating()
+               // self.activityIndicator?.stopAnimating()
             }
             
         }
@@ -24,20 +24,21 @@ class ListTableViewController: UITableViewController {
     private var activityIndicator: UIActivityIndicatorView?
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.rowHeight = 300
         
     }
     
-    private func showActivityIndicator(in view: UIView) -> UIActivityIndicatorView {
-        let activityIndicator = UIActivityIndicatorView(style: .large)
-        activityIndicator.color = .white
-        activityIndicator.startAnimating()
-        activityIndicator.center = view.center
-        activityIndicator.hidesWhenStopped = true
-        
-        view.addSubview(activityIndicator)
-        
-        return activityIndicator
-    }
+//    private func showActivityIndicator(in view: UIView) -> UIActivityIndicatorView {
+//        let activityIndicator = UIActivityIndicatorView(style: .large)
+//        activityIndicator.color = .black
+//        activityIndicator.startAnimating()
+//        activityIndicator.center = view.center
+//        activityIndicator.hidesWhenStopped = true
+//        
+//        view.addSubview(activityIndicator)
+//        
+//        return activityIndicator
+//    }
 
     
 
@@ -55,16 +56,15 @@ class ListTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "card", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "card", for: indexPath) as! CardView
         
-        var content = cell.defaultContentConfiguration()
+        //var content = cell.defaultContentConfiguration()
         
-        if !isReceived {
-            activityIndicator = showActivityIndicator(in: view)
-        } else {
-            
-            content.text = sights[indexPath.row].title
-            cell.contentConfiguration = content
+         if isReceived {
+            let sight = sights[indexPath.row]
+            cell.configure(with: sight)
+            //content.text = sights[indexPath.row].title
+            //cell.contentConfiguration = content
             
             
         }

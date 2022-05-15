@@ -31,7 +31,8 @@ class ApiManager {
                         title: doc["title"] as? String ?? "",
                         type: doc["type"] as? String ?? "",
                         locationName: doc["locationName"] as? String ?? "",
-                        coordinate: doc["coordinate"] as? GeoPoint ?? GeoPoint(latitude: 42.543212, longitude: 74.215323)
+                        coordinate: doc["coordinate"] as? GeoPoint ?? GeoPoint(latitude: 42.543212, longitude: 74.215323),
+                        imageSrc: doc["imageSrc"] as? String ?? "default"
                     ))
                    
                     
@@ -44,6 +45,28 @@ class ApiManager {
     
     return sights
     }
+    
+    func getImage(picName: String, completion: @escaping (UIImage) -> Void) {
+        let storage = Storage.storage()
+        let reference = storage.reference()
+        let pathRef = reference.child("sightImages")
+        
+        var image: UIImage = UIImage(named: "default")!
+        
+        let fileRef = pathRef.child(picName)
+        fileRef.getData(maxSize: 1024*1024, completion: {data, error in
+            guard error == nil else {
+                completion(image)
+                return }
+            image = UIImage(data: data!)!
+            completion(image)
+            
+        })
+        
+    }
+
+    
+    
 //    func fetchData() async -> [Sight] {
 //        let array = await getSights()
 //        return array

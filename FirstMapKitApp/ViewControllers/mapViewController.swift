@@ -76,7 +76,8 @@ extension mapViewController: CLLocationManagerDelegate {
                         title: sight.title,
                         locationName: sight.locationName,
                         type: sight.type,
-                        coordinate: CLLocationCoordinate2D(latitude: sight.coordinate.latitude, longitude: sight.coordinate.longitude)
+                        coordinate: CLLocationCoordinate2D(latitude: sight.coordinate.latitude, longitude: sight.coordinate.longitude),
+                        imageSrc: sight.imageSrc
                        )
                        self.mapView.addAnnotation(annotation)
                    }
