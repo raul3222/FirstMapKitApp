@@ -10,6 +10,7 @@ import UIKit
 class CardCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var cells = [Sight]()
+    var itemTappedDelegate: ItemTappedDelegate!
     
     init() {
         let layout = UICollectionViewFlowLayout()
@@ -42,6 +43,12 @@ class CardCollectionView: UICollectionView, UICollectionViewDelegate, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: Constants.cardItemWidth, height: frame.height * 0.8)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        guard let detailedVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "detailedVC") as? DetailedCardViewController else { return }
+       // let currentController = self.getCurrentViewController()
+        itemTappedDelegate.itemTapped(index: indexPath.row)
     }
     
     required init?(coder: NSCoder) {

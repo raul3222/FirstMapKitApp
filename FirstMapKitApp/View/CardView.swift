@@ -13,6 +13,8 @@ class CardView: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    var images: [UIImage] = []
+    
     
     func configure(with sight: Sight) {
         self.titleLabel.text = sight.title

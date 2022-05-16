@@ -18,6 +18,7 @@
 		AD367F25282C667400592D0D /* SightViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD367F24282C667400592D0D /* SightViews.swift */; };
 		AD367F29282D6C9300592D0D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD367F28282D6C9300592D0D /* GoogleService-Info.plist */; };
 		AD367F2B282D71D300592D0D /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD367F2A282D71D200592D0D /* ApiManager.swift */; };
+		AD5016FC2832F9E40032A910 /* DetailedCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5016FB2832F9E40032A910 /* DetailedCardViewController.swift */; };
 		ADDC6F3B28315A3E004F5EBA /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC6F3A28315A3E004F5EBA /* CardView.swift */; };
 		ADDC6F3D28319310004F5EBA /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC6F3C28319310004F5EBA /* CollectionViewController.swift */; };
 		ADDC6F3F283194E1004F5EBA /* CardCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC6F3E283194E1004F5EBA /* CardCollectionView.swift */; };
@@ -44,6 +45,7 @@
 		AD367F24282C667400592D0D /* SightViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightViews.swift; sourceTree = "<group>"; };
 		AD367F28282D6C9300592D0D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AD367F2A282D71D200592D0D /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		AD5016FB2832F9E40032A910 /* DetailedCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedCardViewController.swift; sourceTree = "<group>"; };
 		ADDC6F3A28315A3E004F5EBA /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		ADDC6F3C28319310004F5EBA /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		ADDC6F3E283194E1004F5EBA /* CardCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionView.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				ADE926002830305F00F8EDA3 /* ListTableViewController.swift */,
 				ADE9260328303E5A00F8EDA3 /* TabBarController.swift */,
 				ADDC6F3C28319310004F5EBA /* CollectionViewController.swift */,
+				AD5016FB2832F9E40032A910 /* DetailedCardViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				ADDC6F432831A346004F5EBA /* Constants.swift in Sources */,
 				AD367F23282C50AB00592D0D /* Sight.swift in Sources */,
 				AD367F0E282C47E800592D0D /* SceneDelegate.swift in Sources */,
+				AD5016FC2832F9E40032A910 /* DetailedCardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

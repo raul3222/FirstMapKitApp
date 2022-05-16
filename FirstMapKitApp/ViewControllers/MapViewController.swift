@@ -29,7 +29,9 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         configureCoreLocation()
         setZoomRange()
-        //        createPins()
+        if (sights != nil) && !sights.isEmpty{
+        createPins()
+        }
         mapView.delegate = self
         mapView.register(SightView.self,
                          forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)//используем пока дефолтный идентификатор, потому что у нас класс с одним типом аннотаций.

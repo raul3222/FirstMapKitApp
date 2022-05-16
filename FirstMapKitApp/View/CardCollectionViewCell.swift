@@ -30,12 +30,6 @@ class CardCollectionViewCell: UICollectionViewCell {
         addSubview(titleLabel)
         addSubview(mainImageView)
        
-//        NSLayoutConstraint.activate([
-//            mainImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-//            mainImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
-//            mainImageView.topAnchor.constraint(equalTo: topAnchor),
-//            mainImageView.bottomAnchor.constraint(equalTo: bottomAnchor)
-//        ])
         NSLayoutConstraint.activate([
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
