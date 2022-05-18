@@ -13,6 +13,7 @@ class CardViewCell: UICollectionViewCell {
     @IBOutlet weak var cardImage: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     func configure(with sight: Sight) {
+        cardImage.layer.cornerRadius = 5
            self.cardTitleLabel.text = sight.title
             guard let image = sight.imageSrc else { return }
             fetchImage(with: image)

@@ -38,7 +38,7 @@ class SightView: MKAnnotationView {
 
       canShowCallout = true
       calloutOffset = CGPoint(x: -5, y: 5)
-      //rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+      leftCalloutAccessoryView = UIButton(type: .detailDisclosure)
         let mapsButton = UIButton(frame: CGRect(
           origin: CGPoint.zero,
           size: CGSize(width: 30, height: 30)))

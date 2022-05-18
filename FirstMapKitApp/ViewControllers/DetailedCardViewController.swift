@@ -18,7 +18,10 @@ class DetailedCardViewController: UIViewController {
         
     }
     
-
+    @IBAction func showOnTheMapBtnPressed(_ sender: Any) {
+        
+    }
+    
   
 
 }

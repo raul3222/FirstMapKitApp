@@ -21,9 +21,9 @@ class CardCollectionViewController: UIViewController {
     }
         override func viewDidLoad() {
             super.viewDidLoad()
+            self.overrideUserInterfaceStyle = .light //игнорируем темную тему Iphone
             guard let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
             layout.scrollDirection = .horizontal
-
         }
     }
 
@@ -43,7 +43,14 @@ extension CardCollectionViewController: UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: Constants.cardItemWidth, height: (collectionViewLayout.collectionView?.frame.height ?? 200) * 0.8)
+        return CGSize(width: Constants.cardItemWidth, height: (collectionViewLayout.collectionView?.frame.height ?? 1) * 0.9)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            guard let detailedVC = segue.destination as? DetailedCardViewController else { return }
+        guard let indexPath = collectionView.indexPathsForSelectedItems else { return }
+        let sight = sights[indexPath.first!.row]
+            detailedVC.sight = sight
     }
     
 }
