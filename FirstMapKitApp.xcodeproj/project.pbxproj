@@ -19,10 +19,11 @@
 		AD367F29282D6C9300592D0D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD367F28282D6C9300592D0D /* GoogleService-Info.plist */; };
 		AD367F2B282D71D300592D0D /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD367F2A282D71D200592D0D /* ApiManager.swift */; };
 		AD5016FC2832F9E40032A910 /* DetailedCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5016FB2832F9E40032A910 /* DetailedCardViewController.swift */; };
-		ADDC6F3B28315A3E004F5EBA /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC6F3A28315A3E004F5EBA /* CardView.swift */; };
-		ADDC6F3D28319310004F5EBA /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC6F3C28319310004F5EBA /* CollectionViewController.swift */; };
-		ADDC6F3F283194E1004F5EBA /* CardCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC6F3E283194E1004F5EBA /* CardCollectionView.swift */; };
-		ADDC6F41283195AC004F5EBA /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC6F40283195AC004F5EBA /* CardCollectionViewCell.swift */; };
+		AD5017002833B4980032A910 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5016FF2833B4980032A910 /* MenuViewController.swift */; };
+		AD5017022833D5070032A910 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5017012833D5070032A910 /* MenuTableViewCell.swift */; };
+		AD501704283446200032A910 /* CardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD501703283446200032A910 /* CardCollectionViewController.swift */; };
+		AD501706283448BC0032A910 /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD501705283448BC0032A910 /* CardViewCell.swift */; };
+		ADDC6F3B28315A3E004F5EBA /* CardView_TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC6F3A28315A3E004F5EBA /* CardView_TableView.swift */; };
 		ADDC6F432831A346004F5EBA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC6F422831A346004F5EBA /* Constants.swift */; };
 		ADE926012830305F00F8EDA3 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE926002830305F00F8EDA3 /* ListTableViewController.swift */; };
 		ADE9260428303E5A00F8EDA3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE9260328303E5A00F8EDA3 /* TabBarController.swift */; };
@@ -46,10 +47,11 @@
 		AD367F28282D6C9300592D0D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AD367F2A282D71D200592D0D /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		AD5016FB2832F9E40032A910 /* DetailedCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedCardViewController.swift; sourceTree = "<group>"; };
-		ADDC6F3A28315A3E004F5EBA /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		ADDC6F3C28319310004F5EBA /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
-		ADDC6F3E283194E1004F5EBA /* CardCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionView.swift; sourceTree = "<group>"; };
-		ADDC6F40283195AC004F5EBA /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		AD5016FF2833B4980032A910 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		AD5017012833D5070032A910 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		AD501703283446200032A910 /* CardCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewController.swift; sourceTree = "<group>"; };
+		AD501705283448BC0032A910 /* CardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
+		ADDC6F3A28315A3E004F5EBA /* CardView_TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView_TableView.swift; sourceTree = "<group>"; };
 		ADDC6F422831A346004F5EBA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ADE926002830305F00F8EDA3 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		ADE9260328303E5A00F8EDA3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -116,7 +118,6 @@
 				AD367F16282C47EB00592D0D /* LaunchScreen.storyboard */,
 				AD367F19282C47EB00592D0D /* Info.plist */,
 				AD367F1F282C508B00592D0D /* Sights.swift */,
-				AD367F24282C667400592D0D /* SightViews.swift */,
 				AD367F28282D6C9300592D0D /* GoogleService-Info.plist */,
 				AD367F2A282D71D200592D0D /* ApiManager.swift */,
 			);
@@ -135,9 +136,10 @@
 		ADDC6F3928315A1D004F5EBA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				ADDC6F3A28315A3E004F5EBA /* CardView.swift */,
-				ADDC6F3E283194E1004F5EBA /* CardCollectionView.swift */,
-				ADDC6F40283195AC004F5EBA /* CardCollectionViewCell.swift */,
+				ADDC6F3A28315A3E004F5EBA /* CardView_TableView.swift */,
+				AD5017012833D5070032A910 /* MenuTableViewCell.swift */,
+				AD367F24282C667400592D0D /* SightViews.swift */,
+				AD501705283448BC0032A910 /* CardViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -148,8 +150,9 @@
 				AD367F0F282C47E800592D0D /* MapViewController.swift */,
 				ADE926002830305F00F8EDA3 /* ListTableViewController.swift */,
 				ADE9260328303E5A00F8EDA3 /* TabBarController.swift */,
-				ADDC6F3C28319310004F5EBA /* CollectionViewController.swift */,
 				AD5016FB2832F9E40032A910 /* DetailedCardViewController.swift */,
+				AD5016FF2833B4980032A910 /* MenuViewController.swift */,
+				AD501703283446200032A910 /* CardCollectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -272,16 +275,17 @@
 			files = (
 				AD367F25282C667400592D0D /* SightViews.swift in Sources */,
 				AD367F10282C47E800592D0D /* MapViewController.swift in Sources */,
+				AD501706283448BC0032A910 /* CardViewCell.swift in Sources */,
 				AD367F20282C508B00592D0D /* Sights.swift in Sources */,
 				ADE9260428303E5A00F8EDA3 /* TabBarController.swift in Sources */,
-				ADDC6F3F283194E1004F5EBA /* CardCollectionView.swift in Sources */,
-				ADDC6F3D28319310004F5EBA /* CollectionViewController.swift in Sources */,
-				ADDC6F3B28315A3E004F5EBA /* CardView.swift in Sources */,
-				ADDC6F41283195AC004F5EBA /* CardCollectionViewCell.swift in Sources */,
+				ADDC6F3B28315A3E004F5EBA /* CardView_TableView.swift in Sources */,
 				AD367F2B282D71D300592D0D /* ApiManager.swift in Sources */,
 				ADE926012830305F00F8EDA3 /* ListTableViewController.swift in Sources */,
+				AD5017002833B4980032A910 /* MenuViewController.swift in Sources */,
 				AD367F0C282C47E800592D0D /* AppDelegate.swift in Sources */,
 				ADDC6F432831A346004F5EBA /* Constants.swift in Sources */,
+				AD5017022833D5070032A910 /* MenuTableViewCell.swift in Sources */,
+				AD501704283446200032A910 /* CardCollectionViewController.swift in Sources */,
 				AD367F23282C50AB00592D0D /* Sight.swift in Sources */,
 				AD367F0E282C47E800592D0D /* SceneDelegate.swift in Sources */,
 				AD5016FC2832F9E40032A910 /* DetailedCardViewController.swift in Sources */,

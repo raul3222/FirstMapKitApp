@@ -7,6 +7,8 @@
 
 import Foundation
 import Firebase
+import FirebaseStorage
+import FirebaseStorageCache
 
 class ApiManager {
     static let shared = ApiManager()
@@ -39,6 +41,7 @@ class ApiManager {
         let storage = Storage.storage()
         let reference = storage.reference()
         let pathRef = reference.child("sightImages")
+        
         
         var image: UIImage = UIImage(named: "default")!
         

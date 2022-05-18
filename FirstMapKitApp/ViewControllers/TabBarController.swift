@@ -16,8 +16,16 @@ class TabBarController: UITabBarController {
     }
     
     private func setupViewControllers() {
-        guard let cardVC = viewControllers?.first as? CollectionViewController else { return }
+//        guard let cardVC = viewControllers?.first as? CardCollectionViewController else { return }
+//        let containerVC = ContainerViewController()
+        //containerVC.
+        //let containerVC = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ContainerViewController") as? ContainerViewController)!
+//        present(containerVC, animated: false)
+//
+        guard let cardVC = viewControllers?.first as? CardCollectionViewController else { return }
         guard let mapVC = viewControllers?.last as? MapViewController else { return }
+        
+        
         var sights: [Sight] = []
         ApiManager.shared.fetchData{ items in
             for sight in items {

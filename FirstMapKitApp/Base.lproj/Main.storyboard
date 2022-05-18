@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -35,62 +36,117 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="tio-9Z-lXf" kind="relationship" relationship="viewControllers" id="sz5-mH-gMb"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="0Ei-SC-G3k"/>
+                        <segue destination="Wwj-Vh-LY9" kind="relationship" relationship="viewControllers" id="RPx-Ws-ghu"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="dNI-V9-b6x"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rrE-QX-xG4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1804" y="161"/>
         </scene>
-        <!--Collection View Controller-->
-        <scene sceneID="61R-rv-6mZ">
+        <!--Card Collection View Controller-->
+        <scene sceneID="dzB-03-CGw">
             <objects>
-                <viewController id="tio-9Z-lXf" customClass="CollectionViewController" customModule="FirstMapKitApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="v1C-6a-1P4">
+                <viewController id="Wwj-Vh-LY9" customClass="CardCollectionViewController" customModule="FirstMapKitApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DIK-el-32e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Карточки мест" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jwj-zW-jse">
-                                <rect key="frame" x="40" y="162" width="161" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QLD-T9-1m9">
+                                <rect key="frame" x="10" y="168" width="394" height="400"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="oJa-a6-b6a"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g1R-nI-o85">
+                                    <size key="itemSize" width="323" height="368"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cardItem" id="eAI-cR-PL8" customClass="CardViewCell" customModule="FirstMapKitApp" customModuleProvider="target">
+                                        <rect key="frame" x="35.5" y="0.0" width="323" height="368"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4NZ-kF-p1N">
+                                            <rect key="frame" x="0.0" y="0.0" width="323" height="368"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tzh-7c-L1u">
+                                                    <rect key="frame" x="45" y="87" width="233" height="266"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="233" id="Pdk-kA-vib"/>
+                                                        <constraint firstAttribute="height" constant="266" id="zFB-zQ-Ewz"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSu-Fr-Z95">
+                                                    <rect key="frame" x="140.5" y="28" width="42" height="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="0dn-cU-U5d">
+                                                    <rect key="frame" x="151.5" y="174" width="20" height="20"/>
+                                                </activityIndicatorView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="tzh-7c-L1u" firstAttribute="top" secondItem="rSu-Fr-Z95" secondAttribute="bottom" constant="45" id="A8g-Go-7PR"/>
+                                                <constraint firstAttribute="bottom" secondItem="tzh-7c-L1u" secondAttribute="bottom" constant="15" id="KpS-9F-rgX"/>
+                                                <constraint firstItem="rSu-Fr-Z95" firstAttribute="centerX" secondItem="4NZ-kF-p1N" secondAttribute="centerX" id="OTq-aq-P9g"/>
+                                                <constraint firstItem="0dn-cU-U5d" firstAttribute="centerX" secondItem="4NZ-kF-p1N" secondAttribute="centerX" id="T9r-uT-E84"/>
+                                                <constraint firstItem="rSu-Fr-Z95" firstAttribute="top" secondItem="4NZ-kF-p1N" secondAttribute="top" constant="28" id="cel-U6-VgU"/>
+                                                <constraint firstItem="0dn-cU-U5d" firstAttribute="centerY" secondItem="4NZ-kF-p1N" secondAttribute="centerY" id="lQR-aG-bWd"/>
+                                                <constraint firstItem="tzh-7c-L1u" firstAttribute="centerX" secondItem="4NZ-kF-p1N" secondAttribute="centerX" id="y2c-Y1-f6I"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="323" height="368"/>
+                                        <connections>
+                                            <outlet property="activityIndicator" destination="0dn-cU-U5d" id="ZFZ-L4-Q2I"/>
+                                            <outlet property="cardImage" destination="tzh-7c-L1u" id="EQG-Qm-XyM"/>
+                                            <outlet property="cardTitleLabel" destination="rSu-Fr-Z95" id="SHL-v2-Vci"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Wwj-Vh-LY9" id="PcN-us-3ea"/>
+                                    <outlet property="delegate" destination="Wwj-Vh-LY9" id="Hde-ih-F4T"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R47-e6-Pdg">
+                                <rect key="frame" x="15" y="58" width="47" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="list.triangle" catalog="system"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Карточки достопримечательностей" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYF-zb-bdU">
+                                <rect key="frame" x="40" y="113" width="285" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEn-hb-yZC">
-                                <rect key="frame" x="15" y="93" width="48" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="48" id="5h6-wL-8Nu"/>
-                                    <constraint firstAttribute="height" constant="31" id="wPV-11-Q2F"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="list.dash" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large" weight="bold"/>
-                                </buttonConfiguration>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LZr-Cc-Iem">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="1EQ-9D-cbZ"/>
+                        <viewLayoutGuide key="safeArea" id="p4A-Az-Dec"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Jwj-zW-jse" firstAttribute="leading" secondItem="1EQ-9D-cbZ" secondAttribute="leading" constant="40" id="CTw-AH-hAf"/>
-                            <constraint firstItem="dEn-hb-yZC" firstAttribute="top" secondItem="1EQ-9D-cbZ" secondAttribute="top" constant="5" id="L2G-mh-rge"/>
-                            <constraint firstItem="dEn-hb-yZC" firstAttribute="leading" secondItem="1EQ-9D-cbZ" secondAttribute="leading" constant="15" id="PXY-dx-qUn"/>
-                            <constraint firstItem="Jwj-zW-jse" firstAttribute="top" secondItem="1EQ-9D-cbZ" secondAttribute="top" constant="74" id="ZMz-qJ-gxy"/>
+                            <constraint firstItem="QLD-T9-1m9" firstAttribute="leading" secondItem="p4A-Az-Dec" secondAttribute="leading" constant="10" id="3TU-XM-PJV"/>
+                            <constraint firstItem="p4A-Az-Dec" firstAttribute="trailing" secondItem="QLD-T9-1m9" secondAttribute="trailing" constant="10" id="5dp-T0-OZe"/>
+                            <constraint firstItem="nYF-zb-bdU" firstAttribute="top" secondItem="R47-e6-Pdg" secondAttribute="bottom" constant="24" id="7eW-3w-IpP"/>
+                            <constraint firstItem="p4A-Az-Dec" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="R47-e6-Pdg" secondAttribute="trailing" constant="352" id="Ic9-7P-M4j"/>
+                            <constraint firstItem="p4A-Az-Dec" firstAttribute="top" secondItem="R47-e6-Pdg" secondAttribute="top" constant="30" id="JG8-7U-fcI"/>
+                            <constraint firstItem="nYF-zb-bdU" firstAttribute="leading" secondItem="p4A-Az-Dec" secondAttribute="leading" constant="40" id="NjG-lr-aF2"/>
+                            <constraint firstItem="QLD-T9-1m9" firstAttribute="centerX" secondItem="DIK-el-32e" secondAttribute="centerX" id="PvF-Hg-1zg"/>
+                            <constraint firstItem="R47-e6-Pdg" firstAttribute="leading" secondItem="p4A-Az-Dec" secondAttribute="leading" constant="15" id="lca-pp-W4N"/>
+                            <constraint firstItem="QLD-T9-1m9" firstAttribute="top" secondItem="p4A-Az-Dec" secondAttribute="top" constant="80" id="ljD-uG-4fA"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="menucard.fill" catalog="system" selectedImage="menucard.fill" id="sIq-dC-XHC"/>
+                    <tabBarItem key="tabBarItem" title="" image="menucard.fill" catalog="system" selectedImage="menucard.fill" id="h9G-se-Oma"/>
                     <connections>
-                        <outlet property="backgroundImage" destination="LZr-Cc-Iem" id="Ziu-EO-R0u"/>
-                        <outlet property="cardLabel" destination="Jwj-zW-jse" id="3cF-Vg-UVR"/>
+                        <outlet property="collectionView" destination="QLD-T9-1m9" id="zL2-Ln-GZG"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0f8-2m-aL4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fms-UI-Na4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1755.072463768116" y="-538.39285714285711"/>
+            <point key="canvasLocation" x="-1033.3333333333335" y="-257.14285714285711"/>
         </scene>
         <!--List Table View Controller-->
         <scene sceneID="gNb-SL-ds1">
@@ -150,7 +206,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p5s-Sr-kPA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-939.13043478260875" y="-277.23214285714283"/>
+            <point key="canvasLocation" x="-2312" y="-878"/>
         </scene>
         <!--Detailed Card View Controller-->
         <scene sceneID="SjK-D2-h97">
@@ -244,6 +300,7 @@
     </scenes>
     <resources>
         <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="list.triangle" catalog="system" width="128" height="91"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="marker" width="48" height="48"/>
         <image name="menucard.fill" catalog="system" width="106" height="128"/>
