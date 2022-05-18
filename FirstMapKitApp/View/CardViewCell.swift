@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CardViewCell: UICollectionViewCell {
     @IBOutlet weak var cardTitleLabel: UILabel!
@@ -17,17 +18,22 @@ class CardViewCell: UICollectionViewCell {
             fetchImage(with: image)
        }
     
-       private func fetchImage(with name: String) {
-           activityIndicator.startAnimating()
-           ApiManager.shared.getImage(picName: name) { pict in
-               self.cardImage.image = pict
-
-               DispatchQueue.main.async {
-                   self.activityIndicator.stopAnimating()
-                   self.activityIndicator.hidesWhenStopped = true
-               }
-           }
-       }
+//       private func fetchImage(with name: String) {
+//           activityIndicator.startAnimating()
+//           ApiManager.shared.getImage(picName: name) { pict in
+//               self.cardImage.image = pict
+//
+//               DispatchQueue.main.async {
+//                   self.activityIndicator.stopAnimating()
+//                   self.activityIndicator.hidesWhenStopped = true
+//               }
+//           }
+//       }
+    
+    private func fetchImage(with name: String) {
+        let url = URL(string: name)
+        cardImage.kf.setImage(with: url)
+    }
     
     override func layoutSubviews() {
         self.layer.cornerRadius = 5
