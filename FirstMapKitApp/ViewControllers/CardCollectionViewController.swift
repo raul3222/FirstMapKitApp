@@ -26,6 +26,7 @@ class CardCollectionViewController: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             tableView.dataSource = self
+            tableView.delegate = self
             self.overrideUserInterfaceStyle = .light //игнорируем темную тему Iphone
             guard let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
             layout.scrollDirection = .horizontal
@@ -34,54 +35,55 @@ class CardCollectionViewController: UIViewController {
             view.addGestureRecognizer(swipeRecognizer)
             backgroundImage.image = UIImage(named: "kaliningrad")
             backgroundImage.alpha = 0.3
+            tableView.rowHeight = 50
+            tableView.isScrollEnabled = false
+            tableView.separatorStyle = .none
             
         }
     
     @objc private func handleSwipe(sender: UISwipeGestureRecognizer) {
         if shouldMove {
-            shouldMove = false
-            UIView.animate(withDuration: 0.5,
-                           delay: 0,
-                           usingSpringWithDamping: 0.8,
-                           initialSpringVelocity: 0,
-                           options: .curveEaseInOut,
-                           animations: {
-                            self.newView.frame.origin.x = 0
-            }) { (finished) in
-                
-            }
+           hideMenu()
 
         }
     }
     @IBAction func showMenuButton(_ sender: Any) {
         if !shouldMove {
-            print("false")
             // показываем menu
-            shouldMove = true
-            UIView.animate(withDuration: 0.5,
-                           delay: 0,
-                           usingSpringWithDamping: 0.8,
-                           initialSpringVelocity: 0,
-                           options: .curveEaseInOut,
-                           animations: {
-                            self.newView.frame.origin.x = self.newView.frame.width - 200
-            }) { (finished) in
-                
-            }
+            showMenu()
+            
         } else {
             // убираем menu
-            shouldMove = false
-            UIView.animate(withDuration: 0.5,
-                           delay: 0,
-                           usingSpringWithDamping: 0.8,
-                           initialSpringVelocity: 0,
-                           options: .curveEaseInOut,
-                           animations: {
-                            self.newView.frame.origin.x = 0
-            }) { (finished) in
-                
-            }
+            hideMenu()
         }
+    }
+    private func showMenu() {
+        shouldMove = true
+        UIView.animate(withDuration: 0.5,
+                       delay: 0,
+                       usingSpringWithDamping: 0.8,
+                       initialSpringVelocity: 0,
+                       options: .curveEaseInOut,
+                       animations: {
+                        self.newView.frame.origin.x = self.newView.frame.width - 200
+        }) { (finished) in
+            
+        }
+    }
+    
+    private func hideMenu() {
+        shouldMove = false
+        UIView.animate(withDuration: 0.5,
+                       delay: 0,
+                       usingSpringWithDamping: 0.8,
+                       initialSpringVelocity: 0,
+                       options: .curveEaseInOut,
+                       animations: {
+                        self.newView.frame.origin.x = 0
+        }) { (finished) in
+            
+        }
+
     }
 }
 
@@ -113,21 +115,25 @@ extension CardCollectionViewController: UICollectionViewDataSource, UICollection
     
 }
 
-extension CardCollectionViewController: UITableViewDataSource {
+extension CardCollectionViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell", for: indexPath) as! MenuItemCell
         
-        var content = cell.defaultContentConfiguration()
-        
-        content.text = "\(indexPath.row) item"
-        cell.contentConfiguration = content
+        cell.configureCell(with: indexPath.row)
+//        var content = cell.defaultContentConfiguration()
+//
+//        content.text = "\(indexPath.row) item"
+//        cell.contentConfiguration = content
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+ 
 }

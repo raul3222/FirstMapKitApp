@@ -11,17 +11,12 @@ class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tabBar.items![0].image = UIImage(systemName:  "menucard.fill")?.withRenderingMode(.alwaysOriginal)
         setupViewControllers()
+        tabBar.items![1].image = UIImage(systemName: "map")?.withRenderingMode(.alwaysOriginal)
     }
     
     private func setupViewControllers() {
-//        guard let cardVC = viewControllers?.first as? CardCollectionViewController else { return }
-//        let containerVC = ContainerViewController()
-        //containerVC.
-        //let containerVC = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ContainerViewController") as? ContainerViewController)!
-//        present(containerVC, animated: false)
-//
         guard let cardVC = viewControllers?.first as? CardCollectionViewController else { return }
         guard let mapVC = viewControllers?.last as? MapViewController else { return }
         

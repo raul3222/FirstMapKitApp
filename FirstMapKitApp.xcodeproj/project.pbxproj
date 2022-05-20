@@ -23,6 +23,7 @@
 		AD5017022833D5070032A910 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5017012833D5070032A910 /* MenuTableViewCell.swift */; };
 		AD501704283446200032A910 /* CardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD501703283446200032A910 /* CardCollectionViewController.swift */; };
 		AD501706283448BC0032A910 /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD501705283448BC0032A910 /* CardViewCell.swift */; };
+		ADB97E2E2837993E0086A9BF /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB97E2D2837993E0086A9BF /* MenuItemCell.swift */; };
 		ADDC6F3B28315A3E004F5EBA /* CardView_TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC6F3A28315A3E004F5EBA /* CardView_TableView.swift */; };
 		ADDC6F432831A346004F5EBA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC6F422831A346004F5EBA /* Constants.swift */; };
 		ADE926012830305F00F8EDA3 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE926002830305F00F8EDA3 /* ListTableViewController.swift */; };
@@ -51,6 +52,7 @@
 		AD5017012833D5070032A910 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		AD501703283446200032A910 /* CardCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewController.swift; sourceTree = "<group>"; };
 		AD501705283448BC0032A910 /* CardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
+		ADB97E2D2837993E0086A9BF /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
 		ADDC6F3A28315A3E004F5EBA /* CardView_TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView_TableView.swift; sourceTree = "<group>"; };
 		ADDC6F422831A346004F5EBA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ADE926002830305F00F8EDA3 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				AD5017012833D5070032A910 /* MenuTableViewCell.swift */,
 				AD367F24282C667400592D0D /* SightViews.swift */,
 				AD501705283448BC0032A910 /* CardViewCell.swift */,
+				ADB97E2D2837993E0086A9BF /* MenuItemCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				AD501706283448BC0032A910 /* CardViewCell.swift in Sources */,
 				AD367F20282C508B00592D0D /* Sights.swift in Sources */,
 				ADE9260428303E5A00F8EDA3 /* TabBarController.swift in Sources */,
+				ADB97E2E2837993E0086A9BF /* MenuItemCell.swift in Sources */,
 				ADDC6F3B28315A3E004F5EBA /* CardView_TableView.swift in Sources */,
 				AD367F2B282D71D300592D0D /* ApiManager.swift in Sources */,
 				ADE926012830305F00F8EDA3 /* ListTableViewController.swift in Sources */,
