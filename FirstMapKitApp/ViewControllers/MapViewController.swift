@@ -11,7 +11,7 @@ import Firebase
 import FirebaseFirestore
 
 class MapViewController: UIViewController {
-    
+    var menuController: UIViewController!
     @IBOutlet weak var mapView: MKMapView!
     
     let locationManager = CLLocationManager()
@@ -27,6 +27,7 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad()  {
         super.viewDidLoad()
+
         configureCoreLocation()
         setZoomRange()
         if (sights != nil) && !sights.isEmpty{
@@ -39,7 +40,6 @@ class MapViewController: UIViewController {
     
     @IBAction func currentLocationPressed(_ sender: Any) {
         mapView.centerToLocation(location: initialLocation)
-        
     }
 }
 //MARK: Определяем текущие координаты
