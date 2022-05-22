@@ -20,7 +20,6 @@ class TabBarController: UITabBarController {
         guard let cardVC = viewControllers?.first as? CardCollectionViewController else { return }
         guard let mapVC = viewControllers?.last as? MapViewController else { return }
         
-        
         var sights: [Sight] = []
         ApiManager.shared.fetchData{ items in
             for sight in items {

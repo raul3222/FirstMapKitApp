@@ -11,9 +11,8 @@ import Firebase
 import FirebaseFirestore
 
 class MapViewController: UIViewController {
-    var menuController: UIViewController!
     @IBOutlet weak var mapView: MKMapView!
-    
+    var shouldMove = false
     let locationManager = CLLocationManager()
     var initialLocation = CLLocation(latitude: 54.7064900, longitude: 20.5109500)
     var isReceived = false
@@ -27,7 +26,7 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad()  {
         super.viewDidLoad()
-
+        configureSideMenu()
         configureCoreLocation()
         setZoomRange()
         if (sights != nil) && !sights.isEmpty{
@@ -37,6 +36,20 @@ class MapViewController: UIViewController {
         mapView.register(SightView.self,
                          forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)//используем пока дефолтный идентификатор, потому что у нас класс с одним типом аннотаций.
     }
+    
+    @IBAction func showMenuButton(_ sender: Any) {
+        if !shouldMove {
+            // показываем menu
+            shouldMove = true
+            showMenu(view: mapView)
+            
+        } else {
+            // убираем menu
+            shouldMove = false
+            hideMenu(view: mapView)
+        }
+    }
+
     
     @IBAction func currentLocationPressed(_ sender: Any) {
         mapView.centerToLocation(location: initialLocation)
