@@ -9,6 +9,7 @@ import UIKit
 
 class DetailedCardViewController: UIViewController {
 
+    @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var cardTitleLabel: UILabel!
     
     @IBOutlet weak var containerView: UIView!
@@ -22,7 +23,7 @@ class DetailedCardViewController: UIViewController {
         swipeRecognizer.direction = .left
         view.addGestureRecognizer(swipeRecognizer)
         configureView()
-        
+        testLabel.text = Sight.description(title1: sight.title)
     }
     @objc private func handleSwipe(sender: UISwipeGestureRecognizer) {
         if shouldMove {
