@@ -9,27 +9,31 @@ import Foundation
 import UIKit
 
 extension UIViewController {
-    func showMenu(view: UIView) {
+    func showMenu(view: UIView, leftConstraint: NSLayoutConstraint, rightConstraint: NSLayoutConstraint) {
         UIView.animate(withDuration: 0.5,
                        delay: 0,
                        usingSpringWithDamping: 0.8,
                        initialSpringVelocity: 0,
                        options: .curveEaseInOut,
                        animations: {
-           view.frame.origin.x = view.frame.width - 200
+            leftConstraint.constant = 200
+            rightConstraint.constant = 200
+            self.view.layoutIfNeeded()
         }) { (finished) in
             
         }
     }
     
-    func hideMenu(view: UIView) {
+    func hideMenu(view: UIView, leftConstraint: NSLayoutConstraint, rightConstraint: NSLayoutConstraint) {
         UIView.animate(withDuration: 0.5,
                        delay: 0,
                        usingSpringWithDamping: 0.8,
                        initialSpringVelocity: 0,
                        options: .curveEaseInOut,
                        animations: {
-            view.frame.origin.x = 0
+            leftConstraint.constant = 0
+            rightConstraint.constant = 0
+            self.view.layoutIfNeeded()
         }) { (finished) in
             
         }

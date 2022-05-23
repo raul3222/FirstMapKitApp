@@ -13,7 +13,8 @@ class CardCollectionViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var leftContainerConstraint: NSLayoutConstraint!
+    @IBOutlet weak var trailingContainerConstraint: NSLayoutConstraint!
     var shouldMove = false
     var isReceived = false
     var sights: [Sight]! {
@@ -28,32 +29,34 @@ class CardCollectionViewController: UIViewController {
             super.viewDidLoad()
             configureSideMenu()
             self.overrideUserInterfaceStyle = .light //игнорируем темную тему Iphone
-            guard let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
-            layout.scrollDirection = .horizontal
+//            guard let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
+//            layout.scrollDirection = .horizontal
             let swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.handleSwipe))
             swipeRecognizer.direction = .left
             view.addGestureRecognizer(swipeRecognizer)
             backgroundImage.image = UIImage(named: "kaliningrad")
             backgroundImage.alpha = 0.3
+            navigationItem.title = "Test"
            
             
         }
 
     @objc private func handleSwipe(sender: UISwipeGestureRecognizer) {
         if shouldMove {
-            hideMenu(view: containerView)
+            shouldMove = false
+            hideMenu(view: containerView, leftConstraint: leftContainerConstraint, rightConstraint: trailingContainerConstraint)
         }
     }
     @IBAction func showMenuButton(_ sender: Any) {
         if !shouldMove {
             // показываем menu
             shouldMove = true
-            showMenu(view: containerView)
-            
+            showMenu(view: containerView, leftConstraint: leftContainerConstraint, rightConstraint: trailingContainerConstraint)
         } else {
             // убираем menu
             shouldMove = false
-            hideMenu(view: containerView)
+            hideMenu(view: containerView, leftConstraint: leftContainerConstraint, rightConstraint: trailingContainerConstraint)
+            
         }
     }
 }

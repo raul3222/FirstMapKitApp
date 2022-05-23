@@ -11,6 +11,8 @@ class DetailedCardViewController: UIViewController {
 
     @IBOutlet weak var cardTitleLabel: UILabel!
     
+    @IBOutlet weak var trailingContainerConstraint: NSLayoutConstraint!
+    @IBOutlet weak var leftContainerConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     var shouldMove = false
@@ -26,16 +28,17 @@ class DetailedCardViewController: UIViewController {
     }
     @objc private func handleSwipe(sender: UISwipeGestureRecognizer) {
         if shouldMove {
-            hideMenu(view: containerView)
+            shouldMove = false
+            hideMenu(view: containerView, leftConstraint: leftContainerConstraint, rightConstraint: trailingContainerConstraint)
         }
     }
     @IBAction func showMenuButton(_ sender: Any) {
         if !shouldMove {
             shouldMove = true
-            showMenu(view: containerView)
+            showMenu(view: containerView, leftConstraint: leftContainerConstraint, rightConstraint: trailingContainerConstraint)
         } else {
             shouldMove = false
-            hideMenu(view: containerView)
+            hideMenu(view: containerView, leftConstraint: leftContainerConstraint, rightConstraint: trailingContainerConstraint)
         }
     }
     
