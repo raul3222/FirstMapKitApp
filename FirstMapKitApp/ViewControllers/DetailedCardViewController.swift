@@ -9,6 +9,7 @@ import UIKit
 
 class DetailedCardViewController: UIViewController {
 
+    @IBOutlet  var pageControl: UIPageControl!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var cardTitleLabel: UILabel!
     
@@ -35,6 +36,9 @@ class DetailedCardViewController: UIViewController {
         swipeRecognizer.direction = .left
         view.addGestureRecognizer(swipeRecognizer)
         configureView()
+        pageControl.currentPage = 0
+        pageControl.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+        pageControl.numberOfPages = imgArray.count
         descriptionLabel.text = """
 Единственный в России Музей янтаря был открыт в 1979 году. Он расположен в центре Калининграда на берегу озера Верхнее в крепостной башне середины ХIХ века.
 
@@ -91,6 +95,10 @@ extension DetailedCardViewController: UICollectionViewDataSource, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bannerItem", for: indexPath) as! BannerCollectionViewCell
         cell.configureCell(with: imgArray[indexPath.row]!)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        pageControl.currentPage = indexPath.row
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

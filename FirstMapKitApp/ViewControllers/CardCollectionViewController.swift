@@ -109,12 +109,18 @@ extension CardCollectionViewController: UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == cardCollectionView {
             print(cardCollectionView.layer.frame.height)
-           // let height = UIScreen.main.bounds.height / 2
-            return CGSize(width: Constants.cardItemWidth / 1.3, height: 400)
+//            let height = UIScreen.main.bounds.height / 2
+            let height = collectionView.layer.frame.height / 1.4
+            return CGSize(width: Constants.cardItemWidth / 1.3, height: height)
         }
         else {
             return CGSize(width: 90, height: 90)
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        let bottom = cardCollectionView.layer.frame.height / 4
+        return UIEdgeInsets(top: 0, left: 0, bottom: 110, right: 0)
     }
     
     
