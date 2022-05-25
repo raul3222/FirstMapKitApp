@@ -30,8 +30,8 @@ class MapViewController: UIViewController {
 
         configureCoreLocation()
         setZoomRange()
-        if (sights != nil) && !sights.isEmpty{
-        createPins()
+        if (sights != nil) && !sights.isEmpty {
+            createPins()
         }
         mapView.delegate = self
         mapView.register(SightView.self,

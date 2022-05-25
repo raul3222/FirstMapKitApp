@@ -11,22 +11,19 @@ class DetailedCardViewController: UIViewController {
 
     @IBOutlet  var pageControl: UIPageControl!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var cardTitleLabel: UILabel!
-    
-    @IBOutlet weak var bannerImageView: UIImageView!
     @IBOutlet weak var bannerCollectionView: UICollectionView!
     @IBOutlet weak var trailingContainerConstraint: NSLayoutConstraint!
     @IBOutlet weak var leftContainerConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var imageView: UIImageView!
+
     var shouldMove = false
     var sight: Sight!
-    
     var imgArray = [
         UIImage(named: "cathedral-1"),
         UIImage(named: "cathedral-2"),
         UIImage(named: "cathedral-3")
     ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         bannerCollectionView.dataSource = self
@@ -35,7 +32,6 @@ class DetailedCardViewController: UIViewController {
         let swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.handleSwipe))
         swipeRecognizer.direction = .left
         view.addGestureRecognizer(swipeRecognizer)
-        configureView()
         pageControl.currentPage = 0
         pageControl.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
         pageControl.numberOfPages = imgArray.count
@@ -68,15 +64,12 @@ class DetailedCardViewController: UIViewController {
         }
     }
     
-    @IBAction func showOnTheMapBtnPressed(_ sender: Any) {
-        
-    }
+    @IBAction func showOnTheMapBtnPressed(_ sender: Any) { }
     
-    private func configureView() {
-//        cardTitleLabel.text = sight.title
-        guard let image = sight.imageSrc else { return }
-        //fetchImage(with: image)
-    }
+//    private func configureView() {
+//        guard let image = sight.imageSrc else { return }
+//        fetchImage(with: image)
+//    }
     
 //    private func fetchImage(with name: String) {
 //

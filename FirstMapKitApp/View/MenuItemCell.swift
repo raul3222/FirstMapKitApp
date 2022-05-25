@@ -12,12 +12,10 @@ class MenuItemCell: UITableViewCell {
     @IBOutlet weak var itemImage: UIImageView!
     
     func configureCell(with index: Int) {
-        
         switch index {
         case 0:
             itemLabel.text = "Main"
             itemImage.image = UIImage(systemName: "menucard")
-            
         case 1:
             itemLabel.text = "Map"
             itemImage.image = UIImage(systemName: "map")
@@ -30,7 +28,5 @@ class MenuItemCell: UITableViewCell {
         default:
             print("error")
         }
-        
     }
-
 }

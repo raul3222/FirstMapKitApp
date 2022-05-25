@@ -28,7 +28,5 @@ class FilterItemCollectionViewCell: UICollectionViewCell {
         default:
             print("error")
         }
-        
-        
     }
 }

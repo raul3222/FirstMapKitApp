@@ -27,8 +27,6 @@
 		AD54AE67283E7ED500671FF4 /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD54AE66283E7ED500671FF4 /* BannerCollectionViewCell.swift */; };
 		ADB97E2E2837993E0086A9BF /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB97E2D2837993E0086A9BF /* MenuItemCell.swift */; };
 		ADB97E342837AE520086A9BF /* MenuContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB97E332837AE520086A9BF /* MenuContainerViewController.swift */; };
-		ADB97E392837BD040086A9BF /* MenuConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB97E382837BD040086A9BF /* MenuConfiguration.swift */; };
-		ADDC6F3B28315A3E004F5EBA /* CardView_TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC6F3A28315A3E004F5EBA /* CardView_TableView.swift */; };
 		ADDC6F432831A346004F5EBA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC6F422831A346004F5EBA /* Constants.swift */; };
 		ADE926012830305F00F8EDA3 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE926002830305F00F8EDA3 /* ListTableViewController.swift */; };
 		ADE9260428303E5A00F8EDA3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE9260328303E5A00F8EDA3 /* TabBarController.swift */; };
@@ -60,8 +58,6 @@
 		AD54AE66283E7ED500671FF4 /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		ADB97E2D2837993E0086A9BF /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
 		ADB97E332837AE520086A9BF /* MenuContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuContainerViewController.swift; sourceTree = "<group>"; };
-		ADB97E382837BD040086A9BF /* MenuConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuConfiguration.swift; sourceTree = "<group>"; };
-		ADDC6F3A28315A3E004F5EBA /* CardView_TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView_TableView.swift; sourceTree = "<group>"; };
 		ADDC6F422831A346004F5EBA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ADE926002830305F00F8EDA3 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		ADE9260328303E5A00F8EDA3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -126,7 +122,6 @@
 		AD367F0A282C47E800592D0D /* FirstMapKitApp */ = {
 			isa = PBXGroup;
 			children = (
-				ADB97E372837BCE20086A9BF /* SideMenu */,
 				ADDC6F3928315A1D004F5EBA /* View */,
 				ADE9260228303DDD00F8EDA3 /* ViewControllers */,
 				AD367F21282C50A100592D0D /* Model */,
@@ -152,18 +147,9 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		ADB97E372837BCE20086A9BF /* SideMenu */ = {
-			isa = PBXGroup;
-			children = (
-				ADB97E382837BD040086A9BF /* MenuConfiguration.swift */,
-			);
-			path = SideMenu;
-			sourceTree = "<group>";
-		};
 		ADDC6F3928315A1D004F5EBA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				ADDC6F3A28315A3E004F5EBA /* CardView_TableView.swift */,
 				AD5017012833D5070032A910 /* MenuTableViewCell.swift */,
 				AD367F24282C667400592D0D /* SightViews.swift */,
 				AD501705283448BC0032A910 /* CardViewCell.swift */,
@@ -313,8 +299,6 @@
 				AD367F20282C508B00592D0D /* Sights.swift in Sources */,
 				ADE9260428303E5A00F8EDA3 /* TabBarController.swift in Sources */,
 				ADB97E2E2837993E0086A9BF /* MenuItemCell.swift in Sources */,
-				ADB97E392837BD040086A9BF /* MenuConfiguration.swift in Sources */,
-				ADDC6F3B28315A3E004F5EBA /* CardView_TableView.swift in Sources */,
 				AD367F2B282D71D300592D0D /* ApiManager.swift in Sources */,
 				ADE926012830305F00F8EDA3 /* ListTableViewController.swift in Sources */,
 				AD367F0C282C47E800592D0D /* AppDelegate.swift in Sources */,

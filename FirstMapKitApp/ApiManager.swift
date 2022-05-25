@@ -8,13 +8,11 @@
 import Foundation
 import Firebase
 import FirebaseStorage
-import FirebaseStorageCache
 
 class ApiManager {
     static let shared = ApiManager()
     private init() {}
     var sights: [Sight] = []
-    
     
     func fetchData(completion: @escaping([Sight]) -> ()) -> [Sight]{
         let db = Firestore.firestore()
@@ -42,14 +40,14 @@ class ApiManager {
         let reference = storage.reference()
         let pathRef = reference.child("sightImages")
         
-        
         var image: UIImage = UIImage(named: "default")!
         
         let fileRef = pathRef.child(picName)
         fileRef.getData(maxSize: 1024*1024, completion: {data, error in
             guard error == nil else {
                 completion(image)
-                return }
+                return
+            }
             image = UIImage(data: data!)!
             completion(image)
             

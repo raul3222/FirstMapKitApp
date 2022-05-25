@@ -13,5 +13,4 @@ class BannerCollectionViewCell: UICollectionViewCell {
     func configureCell(with image: UIImage) {
         imageView.image = image
     }
-    
 }

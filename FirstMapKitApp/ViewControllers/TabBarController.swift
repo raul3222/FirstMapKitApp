@@ -26,7 +26,6 @@ class TabBarController: UITabBarController {
             for sight in items {
                 sights.append(sight)
             }
-            
             cardVC.sights = sights
             mapVC.sights = sights
         }

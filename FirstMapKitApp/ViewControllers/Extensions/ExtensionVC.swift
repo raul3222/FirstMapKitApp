@@ -19,11 +19,8 @@ extension UIViewController {
             leftConstraint.constant = 200
             rightConstraint.constant = 200
             self.view.layoutIfNeeded()
-        }) { (finished) in
-            
-        }
+        }) { (finished) in }
     }
-    
     func hideMenu(view: UIView, leftConstraint: NSLayoutConstraint, rightConstraint: NSLayoutConstraint) {
         UIView.animate(withDuration: 0.5,
                        delay: 0,
@@ -34,13 +31,14 @@ extension UIViewController {
             leftConstraint.constant = 0
             rightConstraint.constant = 0
             self.view.layoutIfNeeded()
-        }) { (finished) in
-            
-        }
-        
+        }) { (finished) in }
     }
-     func configureSideMenu() {
-        let menuController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MenuController") as! MenuContainerViewController
+    
+    func configureSideMenu() {
+        let menuController = UIStoryboard(
+            name: "Main",
+            bundle: nil)
+            .instantiateViewController(withIdentifier: "MenuController") as! MenuContainerViewController
         
         view.insertSubview(menuController.view, at: 0)
         addChild(menuController)

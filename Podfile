@@ -8,10 +8,7 @@ target 'FirstMapKitApp' do
   # Pods for FirstMapKitApp
 pod 'FirebaseFirestore'
 pod 'Firebase/Storage'
-pod 'FirebaseDatabase'
-pod 'FirebaseStorage'
 pod 'Firebase/Core'
 pod 'Firebase/Database'
-pod 'FirebaseStorageCache'
 pod 'Kingfisher'
 end

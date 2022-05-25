@@ -13,6 +13,7 @@ class CardViewCell: UICollectionViewCell {
     @IBOutlet weak var cardImage: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var coverView: UIView!
+   
     override func prepareForReuse() {
         super.prepareForReuse()
         cardImage.image = nil
@@ -21,12 +22,13 @@ class CardViewCell: UICollectionViewCell {
     func configure(with sight: Sight) {
         cardImage.layer.cornerRadius = 10
         coverView.layer.cornerRadius = 10
-           self.cardTitleLabel.text = sight.title
-            guard let image = sight.imageSrc else { return }
+        self.cardTitleLabel.text = sight.title
+        guard let image = sight.imageSrc else { return }
         activityIndicator.startAnimating()
-            fetchImage(with: image)
-       }
+        fetchImage(with: image)
+    }
     
+    //MARK: методо заменен методом из библиотеки Kingfisher
 //       private func fetchImage(with name: String) {
 //           activityIndicator.startAnimating()
 //           ApiManager.shared.getImage(picName: name) { pict in
@@ -51,7 +53,6 @@ class CardViewCell: UICollectionViewCell {
         self.layer.shadowRadius = 9
         layer.shadowOpacity = 0.3
         layer.shadowOffset = CGSize(width: 5, height: 8)
-        
         self.clipsToBounds = false
     }
 }

@@ -664,9 +664,6 @@ PODS:
   - FirebaseStorage (8.15.0):
     - FirebaseCore (~> 8.0)
     - GTMSessionFetcher/Core (~> 1.5)
-  - FirebaseStorageCache (0.0.10):
-    - Firebase/Core
-    - Firebase/Storage
   - GoogleAppMeasurement (8.15.0):
     - GoogleAppMeasurement/AdIdSupport (= 8.15.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
@@ -781,10 +778,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
-  - FirebaseDatabase
   - FirebaseFirestore
-  - FirebaseStorage
-  - FirebaseStorageCache
   - Kingfisher
 
 SPEC REPOS:
@@ -799,7 +793,6 @@ SPEC REPOS:
     - FirebaseFirestore
     - FirebaseInstallations
     - FirebaseStorage
-    - FirebaseStorageCache
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
@@ -823,7 +816,6 @@ SPEC CHECKSUMS:
   FirebaseFirestore: d7023faff8e1b4fd69d0adbcf18e65129bc03842
   FirebaseInstallations: 40bd9054049b2eae9a2c38ef1c3dd213df3605cd
   FirebaseStorage: 8019af461599b2c3bc61c6a5dbdfa3d2de66a4d9
-  FirebaseStorageCache: 9049cde60bc4785dc4d838e96db21cf9ebf0d325
   GoogleAppMeasurement: 4c19f031220c72464d460c9daa1fb5d1acce958e
   GoogleDataTransport: 629c20a4d363167143f30ea78320d5a7eb8bd940
   GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
@@ -836,6 +828,6 @@ SPEC CHECKSUMS:
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 99b6f43f9e1044bd87a95a60beff28c2c44ddb72
 
-PODFILE CHECKSUM: e5b30485aef65dd6893f82e517864d9d9c59c863
+PODFILE CHECKSUM: f6485613089736ee64ae396148fdbd52847b5127
 
 COCOAPODS: 1.11.2
