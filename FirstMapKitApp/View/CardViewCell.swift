@@ -13,6 +13,11 @@ class CardViewCell: UICollectionViewCell {
     @IBOutlet weak var cardImage: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var coverView: UIView!
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        cardImage.image = nil
+    }
+    
     func configure(with sight: Sight) {
         cardImage.layer.cornerRadius = 10
         coverView.layer.cornerRadius = 10

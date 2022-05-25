@@ -12,6 +12,7 @@ class DetailedCardViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var cardTitleLabel: UILabel!
     
+    @IBOutlet weak var bannerImageView: UIImageView!
     @IBOutlet weak var bannerCollectionView: UICollectionView!
     @IBOutlet weak var trailingContainerConstraint: NSLayoutConstraint!
     @IBOutlet weak var leftContainerConstraint: NSLayoutConstraint!
@@ -19,6 +20,12 @@ class DetailedCardViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     var shouldMove = false
     var sight: Sight!
+    
+    var imgArray = [
+        UIImage(named: "cathedral-1"),
+        UIImage(named: "cathedral-2"),
+        UIImage(named: "cathedral-3")
+    ]
     override func viewDidLoad() {
         super.viewDidLoad()
         bannerCollectionView.dataSource = self
@@ -64,27 +71,39 @@ class DetailedCardViewController: UIViewController {
     private func configureView() {
 //        cardTitleLabel.text = sight.title
         guard let image = sight.imageSrc else { return }
-        fetchImage(with: image)
+        //fetchImage(with: image)
     }
     
-    private func fetchImage(with name: String) {
-        
-        let url = URL(string: name)
-        imageView.kf.setImage(with: url)
-    }
+//    private func fetchImage(with name: String) {
+//
+//        let url = URL(string: name)
+//        imageView.kf.setImage(with: url)
+//    }
 
 }
 
-extension DetailedCardViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension DetailedCardViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        3
+        imgArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bannerItem", for: indexPath)
-        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bannerItem", for: indexPath) as! BannerCollectionViewCell
+        cell.configureCell(with: imgArray[indexPath.row]!)
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = UIScreen.main.bounds.width - 10
+        let height = collectionView.layer.frame.height
+        return CGSize(width: width, height: height)
+    }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+    }
 }
