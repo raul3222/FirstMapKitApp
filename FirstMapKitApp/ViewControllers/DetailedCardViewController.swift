@@ -12,6 +12,7 @@ class DetailedCardViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var cardTitleLabel: UILabel!
     
+    @IBOutlet weak var bannerCollectionView: UICollectionView!
     @IBOutlet weak var trailingContainerConstraint: NSLayoutConstraint!
     @IBOutlet weak var leftContainerConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerView: UIView!
@@ -20,6 +21,8 @@ class DetailedCardViewController: UIViewController {
     var sight: Sight!
     override func viewDidLoad() {
         super.viewDidLoad()
+        bannerCollectionView.dataSource = self
+        bannerCollectionView.delegate = self
         configureSideMenu()
         let swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.handleSwipe))
         swipeRecognizer.direction = .left
@@ -70,4 +73,18 @@ class DetailedCardViewController: UIViewController {
         imageView.kf.setImage(with: url)
     }
 
+}
+
+extension DetailedCardViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bannerItem", for: indexPath)
+        
+        return cell
+    }
+    
+    
 }
