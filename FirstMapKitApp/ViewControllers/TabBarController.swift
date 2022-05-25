@@ -22,7 +22,7 @@ class TabBarController: UITabBarController {
         
         
         var sights: [Sight] = []
-        ApiManager.shared.fetchData{ items in
+        ApiManager.shared.fetchData { items in
             for sight in items {
                 sights.append(sight)
             }

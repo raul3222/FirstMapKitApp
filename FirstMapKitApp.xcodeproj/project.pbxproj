@@ -23,6 +23,7 @@
 		AD5017022833D5070032A910 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5017012833D5070032A910 /* MenuTableViewCell.swift */; };
 		AD501704283446200032A910 /* CardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD501703283446200032A910 /* CardCollectionViewController.swift */; };
 		AD501706283448BC0032A910 /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD501705283448BC0032A910 /* CardViewCell.swift */; };
+		AD54AE65283E544700671FF4 /* FilterItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD54AE64283E544700671FF4 /* FilterItemCollectionViewCell.swift */; };
 		ADB97E2E2837993E0086A9BF /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB97E2D2837993E0086A9BF /* MenuItemCell.swift */; };
 		ADB97E342837AE520086A9BF /* MenuContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB97E332837AE520086A9BF /* MenuContainerViewController.swift */; };
 		ADB97E392837BD040086A9BF /* MenuConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB97E382837BD040086A9BF /* MenuConfiguration.swift */; };
@@ -54,6 +55,7 @@
 		AD5017012833D5070032A910 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		AD501703283446200032A910 /* CardCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewController.swift; sourceTree = "<group>"; };
 		AD501705283448BC0032A910 /* CardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
+		AD54AE64283E544700671FF4 /* FilterItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		ADB97E2D2837993E0086A9BF /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
 		ADB97E332837AE520086A9BF /* MenuContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuContainerViewController.swift; sourceTree = "<group>"; };
 		ADB97E382837BD040086A9BF /* MenuConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuConfiguration.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				AD367F24282C667400592D0D /* SightViews.swift */,
 				AD501705283448BC0032A910 /* CardViewCell.swift */,
 				ADB97E2D2837993E0086A9BF /* MenuItemCell.swift */,
+				AD54AE64283E544700671FF4 /* FilterItemCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD367F25282C667400592D0D /* SightViews.swift in Sources */,
+				AD54AE65283E544700671FF4 /* FilterItemCollectionViewCell.swift in Sources */,
 				ADB97E342837AE520086A9BF /* MenuContainerViewController.swift in Sources */,
 				AD367F10282C47E800592D0D /* MapViewController.swift in Sources */,
 				AD501706283448BC0032A910 /* CardViewCell.swift in Sources */,
