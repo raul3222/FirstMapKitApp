@@ -77,6 +77,10 @@ class CardCollectionViewController: UIViewController {
             
         }
     }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+
+    }
 }
 
 extension CardCollectionViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -120,7 +124,7 @@ extension CardCollectionViewController: UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         let bottom = cardCollectionView.layer.frame.height / 4
-        return UIEdgeInsets(top: 0, left: 0, bottom: 110, right: 0)
+        return UIEdgeInsets(top: 0, left: 0, bottom: bottom, right: 0)
     }
     
     
