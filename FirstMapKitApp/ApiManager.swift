@@ -13,25 +13,31 @@ class ApiManager {
     static let shared = ApiManager()
     private init() {}
     var sights: [Sight] = []
+    var images: [Image] = []
     
-    func fetchData(completion: @escaping([Sight]) -> ()) -> [Sight]{
+    func fetchData() async throws -> [Sight]{
         let db = Firestore.firestore()
-        db.collection("sight").getDocuments { queary, err in
-            guard err == nil else { return }
-            guard let queary = queary else { return }
-            
-            for doc in queary.documents {
+      let snapshot = try await db.collection("sight").getDocuments()
+    
+        for doc in snapshot.documents {
+            let snap = try await db.collection("sight").document(doc.documentID).collection("images").getDocuments()
+            for doc2 in snap.documents {
+                self.images.append(Image(
+                    id: doc2.documentID,
+                    imageURL: doc2["imageURL"] as? String ?? ""))
+            }
                 self.sights.append(Sight(
                     id: doc.documentID,
                     title: doc["title"] as? String ?? "",
                     type: doc["type"] as? String ?? "",
                     locationName: doc["locationName"] as? String ?? "",
                     coordinate: doc["coordinate"] as? GeoPoint ?? GeoPoint(latitude: 42.543212, longitude: 74.215323),
-                    imageSrc: doc["imageSrc"] as? String ?? "default"
+                    imageSrc: doc["imageSrc"] as? String ?? "default",
+                    images: self.images
                 ))
+            self.images = []
             }
-            completion(self.sights)
-        }
+//        }
         return sights
     }
     

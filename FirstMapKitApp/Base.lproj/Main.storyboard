@@ -431,13 +431,18 @@
                                             <segue destination="DOt-hD-2FW" kind="unwind" unwindAction="unwindFor:" id="DFR-YJ-feY"/>
                                         </connections>
                                     </button>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="xfN-Wc-zw4">
+                                        <rect key="frame" x="177.66666666666666" y="100" width="20" height="20"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="0ae-eF-hwx" secondAttribute="trailing" id="7G9-Xa-znh"/>
                                     <constraint firstItem="N1d-5P-6Ze" firstAttribute="leading" secondItem="xtv-nG-3VL" secondAttribute="leading" constant="8" id="F8B-FL-3Cl"/>
+                                    <constraint firstItem="xfN-Wc-zw4" firstAttribute="centerX" secondItem="xtv-nG-3VL" secondAttribute="centerX" id="M5g-fj-a63"/>
                                     <constraint firstItem="sIf-7Y-1qG" firstAttribute="leading" secondItem="xtv-nG-3VL" secondAttribute="leading" id="Rbg-xp-sr4"/>
                                     <constraint firstItem="NCU-E0-y4h" firstAttribute="top" secondItem="xtv-nG-3VL" secondAttribute="top" constant="30" id="S8B-tF-pZ7"/>
+                                    <constraint firstItem="xfN-Wc-zw4" firstAttribute="top" secondItem="xtv-nG-3VL" secondAttribute="top" constant="100" id="SIc-rI-ba5"/>
                                     <constraint firstItem="0ae-eF-hwx" firstAttribute="bottom" secondItem="Len-Tz-roq" secondAttribute="bottom" constant="1" id="Vsd-mv-mqc"/>
                                     <constraint firstItem="0ae-eF-hwx" firstAttribute="top" secondItem="N1d-5P-6Ze" secondAttribute="bottom" constant="10" id="dHB-q7-bbT"/>
                                     <constraint firstItem="N1d-5P-6Ze" firstAttribute="top" secondItem="NCU-E0-y4h" secondAttribute="bottom" constant="1" id="hXy-6A-W0V"/>
@@ -461,6 +466,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="rhh-TO-mb3"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="xfN-Wc-zw4" id="dQR-b2-BLz"/>
                         <outlet property="bannerCollectionView" destination="0ae-eF-hwx" id="v8e-5Q-j0y"/>
                         <outlet property="containerView" destination="xtv-nG-3VL" id="cp6-LQ-M6R"/>
                         <outlet property="descriptionLabel" destination="fjK-l5-erb" id="nCv-vq-VbA"/>

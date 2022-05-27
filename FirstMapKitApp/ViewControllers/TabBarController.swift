@@ -21,13 +21,20 @@ class TabBarController: UITabBarController {
         guard let mapVC = viewControllers?.last as? MapViewController else { return }
         
         
-        var sights: [Sight] = []
-        ApiManager.shared.fetchData { items in
-            for sight in items {
-                sights.append(sight)
+        //var sights: [Sight] = []
+        Task {
+          let sights = try await ApiManager.shared.fetchData()
+            DispatchQueue.main.async {
+                cardVC.sights = sights
+                mapVC.sights = sights
             }
-            cardVC.sights = sights
-            mapVC.sights = sights
         }
+//        ApiManager.shared.fetchData { items in
+//            for sight in items {
+//                sights.append(sight)
+//            }
+//            cardVC.sights = sights
+//            mapVC.sights = sights
+//        }
     }
 }

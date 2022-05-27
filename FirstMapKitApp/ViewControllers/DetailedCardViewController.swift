@@ -9,6 +9,7 @@ import UIKit
 
 class DetailedCardViewController: UIViewController {
 
+    //@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet  var pageControl: UIPageControl!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var bannerCollectionView: UICollectionView!
@@ -16,6 +17,7 @@ class DetailedCardViewController: UIViewController {
     @IBOutlet weak var leftContainerConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerView: UIView!
 
+    private var activityIndicator: UIActivityIndicatorView?
     var shouldMove = false
     var sight: Sight!
     var imgArray = [
@@ -34,7 +36,7 @@ class DetailedCardViewController: UIViewController {
         view.addGestureRecognizer(swipeRecognizer)
         pageControl.currentPage = 0
         pageControl.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
-        pageControl.numberOfPages = imgArray.count
+        pageControl.numberOfPages = sight.images?.count ?? 1
         descriptionLabel.text = """
 Единственный в России Музей янтаря был открыт в 1979 году. Он расположен в центре Калининграда на берегу озера Верхнее в крепостной башне середины ХIХ века.
 
@@ -64,6 +66,8 @@ class DetailedCardViewController: UIViewController {
         }
     }
     
+   
+    
     @IBAction func showOnTheMapBtnPressed(_ sender: Any) { }
     
 //    private func configureView() {
@@ -81,12 +85,15 @@ class DetailedCardViewController: UIViewController {
 
 extension DetailedCardViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        imgArray.count
+        //imgArray.count
+        sight.images?.count ?? 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bannerItem", for: indexPath) as! BannerCollectionViewCell
-        cell.configureCell(with: imgArray[indexPath.row]!)
+        guard let images = sight.images else { return cell }
+       // guard let image = sight.images[indexPath.row] else { return }
+        cell.configureCell(with: images[indexPath.row])
         return cell
     }
     

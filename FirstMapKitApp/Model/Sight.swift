@@ -16,4 +16,10 @@ struct Sight: Identifiable {
     let locationName: String
     let coordinate: GeoPoint
     let imageSrc: String?
+    let images: [Image]?
+}
+
+struct Image: Identifiable {
+    let id: String
+    let imageURL: String
 }
