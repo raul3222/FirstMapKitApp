@@ -17,7 +17,6 @@
 		AD367F20282C508B00592D0D /* Sights.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD367F1F282C508B00592D0D /* Sights.swift */; };
 		AD367F23282C50AB00592D0D /* Sight.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD367F22282C50AB00592D0D /* Sight.swift */; };
 		AD367F25282C667400592D0D /* SightViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD367F24282C667400592D0D /* SightViews.swift */; };
-		AD367F29282D6C9300592D0D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD367F28282D6C9300592D0D /* GoogleService-Info.plist */; };
 		AD367F2B282D71D300592D0D /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD367F2A282D71D200592D0D /* ApiManager.swift */; };
 		AD5016FC2832F9E40032A910 /* DetailedCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5016FB2832F9E40032A910 /* DetailedCardViewController.swift */; };
 		AD5017022833D5070032A910 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5017012833D5070032A910 /* MenuTableViewCell.swift */; };
@@ -25,6 +24,8 @@
 		AD501706283448BC0032A910 /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD501705283448BC0032A910 /* CardViewCell.swift */; };
 		AD54AE65283E544700671FF4 /* FilterItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD54AE64283E544700671FF4 /* FilterItemCollectionViewCell.swift */; };
 		AD54AE67283E7ED500671FF4 /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD54AE66283E7ED500671FF4 /* BannerCollectionViewCell.swift */; };
+		AD6C6CD72842582600363E58 /* CardCollectionViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C6CD62842582600363E58 /* CardCollectionViewControllerExtension.swift */; };
+		AD6C6CD9284279C000363E58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD6C6CD8284279C000363E58 /* GoogleService-Info.plist */; };
 		ADB97E2E2837993E0086A9BF /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB97E2D2837993E0086A9BF /* MenuItemCell.swift */; };
 		ADB97E342837AE520086A9BF /* MenuContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB97E332837AE520086A9BF /* MenuContainerViewController.swift */; };
 		ADDC6F432831A346004F5EBA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC6F422831A346004F5EBA /* Constants.swift */; };
@@ -48,7 +49,6 @@
 		AD367F1F282C508B00592D0D /* Sights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sights.swift; sourceTree = "<group>"; };
 		AD367F22282C50AB00592D0D /* Sight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sight.swift; sourceTree = "<group>"; };
 		AD367F24282C667400592D0D /* SightViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightViews.swift; sourceTree = "<group>"; };
-		AD367F28282D6C9300592D0D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AD367F2A282D71D200592D0D /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		AD5016FB2832F9E40032A910 /* DetailedCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedCardViewController.swift; sourceTree = "<group>"; };
 		AD5017012833D5070032A910 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -56,6 +56,8 @@
 		AD501705283448BC0032A910 /* CardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
 		AD54AE64283E544700671FF4 /* FilterItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		AD54AE66283E7ED500671FF4 /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		AD6C6CD62842582600363E58 /* CardCollectionViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewControllerExtension.swift; sourceTree = "<group>"; };
+		AD6C6CD8284279C000363E58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "FirstMapKitApp/New Group/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		ADB97E2D2837993E0086A9BF /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
 		ADB97E332837AE520086A9BF /* MenuContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuContainerViewController.swift; sourceTree = "<group>"; };
 		ADDC6F422831A346004F5EBA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				AD239F3D283A50C4003A599E /* ExtensionVC.swift */,
+				AD6C6CD62842582600363E58 /* CardCollectionViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -125,15 +128,11 @@
 				ADDC6F3928315A1D004F5EBA /* View */,
 				ADE9260228303DDD00F8EDA3 /* ViewControllers */,
 				AD367F21282C50A100592D0D /* Model */,
-				AD367F0B282C47E800592D0D /* AppDelegate.swift */,
-				AD367F0D282C47E800592D0D /* SceneDelegate.swift */,
-				AD367F11282C47E800592D0D /* Main.storyboard */,
+				AD6C6CDA284279CE00363E58 /* AppConfig */,
+				AD6C6CDC28427AAE00363E58 /* Storyboards */,
+				AD6C6CD8284279C000363E58 /* GoogleService-Info.plist */,
 				AD367F14282C47EB00592D0D /* Assets.xcassets */,
-				AD367F16282C47EB00592D0D /* LaunchScreen.storyboard */,
-				AD367F19282C47EB00592D0D /* Info.plist */,
-				AD367F1F282C508B00592D0D /* Sights.swift */,
-				AD367F28282D6C9300592D0D /* GoogleService-Info.plist */,
-				AD367F2A282D71D200592D0D /* ApiManager.swift */,
+				AD6C6CDB28427A9C00363E58 /* Services */,
 			);
 			path = FirstMapKitApp;
 			sourceTree = "<group>";
@@ -145,6 +144,34 @@
 				ADDC6F422831A346004F5EBA /* Constants.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		AD6C6CDA284279CE00363E58 /* AppConfig */ = {
+			isa = PBXGroup;
+			children = (
+				AD367F0B282C47E800592D0D /* AppDelegate.swift */,
+				AD367F0D282C47E800592D0D /* SceneDelegate.swift */,
+				AD367F19282C47EB00592D0D /* Info.plist */,
+			);
+			path = AppConfig;
+			sourceTree = "<group>";
+		};
+		AD6C6CDB28427A9C00363E58 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AD367F1F282C508B00592D0D /* Sights.swift */,
+				AD367F2A282D71D200592D0D /* ApiManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AD6C6CDC28427AAE00363E58 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AD367F11282C47E800592D0D /* Main.storyboard */,
+				AD367F16282C47EB00592D0D /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		ADDC6F3928315A1D004F5EBA /* View */ = {
@@ -235,7 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD367F18282C47EB00592D0D /* LaunchScreen.storyboard in Resources */,
-				AD367F29282D6C9300592D0D /* GoogleService-Info.plist in Resources */,
+				AD6C6CD9284279C000363E58 /* GoogleService-Info.plist in Resources */,
 				AD367F15282C47EB00592D0D /* Assets.xcassets in Resources */,
 				AD367F13282C47E800592D0D /* Main.storyboard in Resources */,
 			);
@@ -293,6 +320,7 @@
 				AD367F25282C667400592D0D /* SightViews.swift in Sources */,
 				AD54AE65283E544700671FF4 /* FilterItemCollectionViewCell.swift in Sources */,
 				ADB97E342837AE520086A9BF /* MenuContainerViewController.swift in Sources */,
+				AD6C6CD72842582600363E58 /* CardCollectionViewControllerExtension.swift in Sources */,
 				AD54AE67283E7ED500671FF4 /* BannerCollectionViewCell.swift in Sources */,
 				AD367F10282C47E800592D0D /* MapViewController.swift in Sources */,
 				AD501706283448BC0032A910 /* CardViewCell.swift in Sources */,
@@ -460,7 +488,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RGKK797JHY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FirstMapKitApp/Info.plist;
+				INFOPLIST_FILE = FirstMapKitApp/AppConfig/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -472,7 +501,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = raul.FirstMapKitApp;
+				PRODUCT_BUNDLE_IDENTIFIER = raul.CityGuide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -490,7 +519,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RGKK797JHY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FirstMapKitApp/Info.plist;
+				INFOPLIST_FILE = FirstMapKitApp/AppConfig/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -502,7 +532,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = raul.FirstMapKitApp;
+				PRODUCT_BUNDLE_IDENTIFIER = raul.CityGuide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

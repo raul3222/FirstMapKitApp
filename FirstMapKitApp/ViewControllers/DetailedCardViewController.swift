@@ -9,7 +9,7 @@ import UIKit
 
 class DetailedCardViewController: UIViewController {
 
-    //@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet  var pageControl: UIPageControl!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var bannerCollectionView: UICollectionView!
@@ -17,7 +17,7 @@ class DetailedCardViewController: UIViewController {
     @IBOutlet weak var leftContainerConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerView: UIView!
 
-    private var activityIndicator: UIActivityIndicatorView?
+    
     var shouldMove = false
     var sight: Sight!
     var imgArray = [
@@ -28,6 +28,8 @@ class DetailedCardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        titleLabel.text = sight.title
         bannerCollectionView.dataSource = self
         bannerCollectionView.delegate = self
         configureSideMenu()

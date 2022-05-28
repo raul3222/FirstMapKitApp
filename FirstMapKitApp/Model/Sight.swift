@@ -9,7 +9,11 @@ import Foundation
 import MapKit
 import Firebase
 
-struct Sight: Identifiable {
+struct Sight: Identifiable, Equatable {
+    static func == (lhs: Sight, rhs: Sight) -> Bool {
+        lhs.type == rhs.type
+    }
+    
     let id: String
     let title: String
     let type: String

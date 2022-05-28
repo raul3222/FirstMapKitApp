@@ -9,6 +9,7 @@ import UIKit
 
 
 class CardCollectionViewController: UIViewController {
+    @IBOutlet weak var filterCoverView: UIView!
     @IBOutlet weak var filterCollectionView: UICollectionView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var backgroundImage: UIImageView!
@@ -16,8 +17,17 @@ class CardCollectionViewController: UIViewController {
     @IBOutlet weak var leftContainerConstraint: NSLayoutConstraint!
     @IBOutlet weak var trailingContainerConstraint: NSLayoutConstraint!
     
+    var isFiltered = false
     var shouldMove = false
     var isReceived = false
+    
+    var isArchPressed = false
+    var isParkPressed = false
+    var isMuseumPressed = false
+    var isChurhPressed = false
+    
+    var chosen = Set<String>()
+    var filteredSights: [Sight] = []
     var sights: [Sight]! {
         didSet {
             isReceived = true
@@ -26,22 +36,23 @@ class CardCollectionViewController: UIViewController {
             }
         }
     }
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            cardCollectionView.dataSource = self
-            cardCollectionView.delegate = self
-            filterCollectionView.dataSource = self
-            filterCollectionView.delegate = self
-            configureSideMenu()
-            self.overrideUserInterfaceStyle = .light
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print(UIScreen.main.bounds.size)
+        cardCollectionView.dataSource = self
+        cardCollectionView.delegate = self
+        filterCollectionView.dataSource = self
+        filterCollectionView.delegate = self
+        configureSideMenu()
+        self.overrideUserInterfaceStyle = .light
         
-            let swipeRecognizer = UISwipeGestureRecognizer(
-                target: self,
-                action: #selector(self.handleSwipe))
-            swipeRecognizer.direction = .left
-            view.addGestureRecognizer(swipeRecognizer)
-        }
-
+        let swipeRecognizer = UISwipeGestureRecognizer(
+            target: self,
+            action: #selector(self.handleSwipe))
+        swipeRecognizer.direction = .left
+        view.addGestureRecognizer(swipeRecognizer)
+    }
     @objc private func handleSwipe(sender: UISwipeGestureRecognizer) {
         if shouldMove {
             shouldMove = false
@@ -61,10 +72,12 @@ class CardCollectionViewController: UIViewController {
     @IBAction func unwind(for segue: UIStoryboardSegue) { }
 }
 
+//MARK: UICollectionView protocols
+
 extension CardCollectionViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == cardCollectionView {
-            return isReceived ? sights.count : 1
+            return isReceived ? (!filteredSights.isEmpty ? filteredSights.count : sights.count) : 1
         }
         else {
             return 4
@@ -78,12 +91,17 @@ extension CardCollectionViewController: UICollectionViewDataSource, UICollection
                 for: indexPath) as! CardViewCell
             cell.backgroundColor = #colorLiteral(red: 0.978212297, green: 0.9784083962, blue: 0.9844668508, alpha: 1)
             if isReceived {
-                cell.configure(with: sights[indexPath.row])
+                if filteredSights.isEmpty {
+                    cell.configure(with: sights[indexPath.row])
+                } else {
+                    cell.configure(with: filteredSights[indexPath.row])
+                }
             }
             return cell
         } else {
+            //MARK: Configuring Filter cells
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "filterCell", for: indexPath) as! FilterItemCollectionViewCell
-            cell.configureFilterCell(index: indexPath.row)
+                cell.configureFilterCell(index: indexPath.row, choosen: chosen)
             return cell
         }
     }
@@ -94,6 +112,7 @@ extension CardCollectionViewController: UICollectionViewDataSource, UICollection
             return CGSize(width: Constants.cardItemWidth / 1.3, height: height)
         } else {
             return CGSize(width: 90, height: 90)
+            
         }
     }
     
@@ -105,10 +124,22 @@ extension CardCollectionViewController: UICollectionViewDataSource, UICollection
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            guard let detailedVC = segue.destination as? DetailedCardViewController else { return }
+        guard let detailedVC = segue.destination as? DetailedCardViewController else { return }
         guard let indexPath = cardCollectionView.indexPathsForSelectedItems else { return }
-        let sight = sights[indexPath.first!.row]
+        if filteredSights.isEmpty {
+            let sight = sights[indexPath.first!.row]
             detailedVC.sight = sight
+        } else {
+            let sight = filteredSights[indexPath.first!.row]
+            detailedVC.sight = sight
+        }
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == filterCollectionView {
+            filterSights(index: indexPath.row)
+            cardCollectionView.reloadData()
+            filterCollectionView.reloadData()
+        }
+    }
 }

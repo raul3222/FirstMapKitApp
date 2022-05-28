@@ -3,6 +3,7 @@
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -180,7 +181,7 @@
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lVR-Nf-6nC">
                                                             <rect key="frame" x="15" y="7" width="60" height="60"/>
-                                                            <color key="backgroundColor" red="0.088872931897640228" green="0.22340685129165649" blue="0.68177789449691772" alpha="0.24494610716965023" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="0.29614955068424048" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="60" id="EMH-gM-gi3"/>
                                                                 <constraint firstAttribute="height" constant="60" id="Ts0-eW-cKO"/>
@@ -203,6 +204,7 @@
                                                 </collectionViewCellContentView>
                                                 <size key="customSize" width="90" height="90"/>
                                                 <connections>
+                                                    <outlet property="coverView" destination="lVR-Nf-6nC" id="6iQ-0Q-i8e"/>
                                                     <outlet property="imageView" destination="SAx-kO-p0X" id="O8S-CE-4uX"/>
                                                     <outlet property="label" destination="VdJ-X2-gT5" id="Sfk-wJ-w4e"/>
                                                 </connections>
@@ -348,7 +350,7 @@
                                         </connections>
                                     </button>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sIf-7Y-1qG">
-                                        <rect key="frame" x="0.0" y="345" width="375" height="467"/>
+                                        <rect key="frame" x="0.0" y="340" width="375" height="472"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IMc-66-Hs8">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="56.333333333333336"/>
@@ -380,7 +382,7 @@
                                         <viewLayoutGuide key="frameLayoutGuide" id="cEk-am-jnB"/>
                                     </scrollView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0ae-eF-hwx">
-                                        <rect key="frame" x="0.0" y="131" width="375" height="204"/>
+                                        <rect key="frame" x="0.0" y="126" width="375" height="204"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="204" id="OEx-7m-PNv"/>
@@ -418,39 +420,45 @@
                                         </cells>
                                     </collectionView>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Len-Tz-roq">
-                                        <rect key="frame" x="131" y="309" width="113" height="25"/>
+                                        <rect key="frame" x="131" y="304" width="113" height="25"/>
                                     </pageControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCU-E0-y4h">
-                                        <rect key="frame" x="15" y="30" width="69" height="50"/>
+                                        <rect key="frame" x="10" y="30" width="75.666666666666671" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="ASh-qq-uUh"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title="back"/>
+                                        <buttonConfiguration key="configuration" style="plain" imagePlacement="leading" title="Back">
+                                            <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="large"/>
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="17"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <segue destination="DOt-hD-2FW" kind="unwind" unwindAction="unwindFor:" id="DFR-YJ-feY"/>
                                         </connections>
                                     </button>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="xfN-Wc-zw4">
-                                        <rect key="frame" x="177.66666666666666" y="100" width="20" height="20"/>
-                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aK-gW-HWc">
+                                        <rect key="frame" x="160.33333333333334" y="59.000000000000007" width="54.666666666666657" height="25.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="5aK-gW-HWc" firstAttribute="top" secondItem="xtv-nG-3VL" secondAttribute="top" constant="59" id="2pg-dL-nOi"/>
                                     <constraint firstAttribute="trailing" secondItem="0ae-eF-hwx" secondAttribute="trailing" id="7G9-Xa-znh"/>
                                     <constraint firstItem="N1d-5P-6Ze" firstAttribute="leading" secondItem="xtv-nG-3VL" secondAttribute="leading" constant="8" id="F8B-FL-3Cl"/>
-                                    <constraint firstItem="xfN-Wc-zw4" firstAttribute="centerX" secondItem="xtv-nG-3VL" secondAttribute="centerX" id="M5g-fj-a63"/>
                                     <constraint firstItem="sIf-7Y-1qG" firstAttribute="leading" secondItem="xtv-nG-3VL" secondAttribute="leading" id="Rbg-xp-sr4"/>
                                     <constraint firstItem="NCU-E0-y4h" firstAttribute="top" secondItem="xtv-nG-3VL" secondAttribute="top" constant="30" id="S8B-tF-pZ7"/>
-                                    <constraint firstItem="xfN-Wc-zw4" firstAttribute="top" secondItem="xtv-nG-3VL" secondAttribute="top" constant="100" id="SIc-rI-ba5"/>
                                     <constraint firstItem="0ae-eF-hwx" firstAttribute="bottom" secondItem="Len-Tz-roq" secondAttribute="bottom" constant="1" id="Vsd-mv-mqc"/>
-                                    <constraint firstItem="0ae-eF-hwx" firstAttribute="top" secondItem="N1d-5P-6Ze" secondAttribute="bottom" constant="10" id="dHB-q7-bbT"/>
+                                    <constraint firstItem="0ae-eF-hwx" firstAttribute="top" secondItem="N1d-5P-6Ze" secondAttribute="bottom" constant="5" id="dHB-q7-bbT"/>
                                     <constraint firstItem="N1d-5P-6Ze" firstAttribute="top" secondItem="NCU-E0-y4h" secondAttribute="bottom" constant="1" id="hXy-6A-W0V"/>
-                                    <constraint firstItem="NCU-E0-y4h" firstAttribute="leading" secondItem="xtv-nG-3VL" secondAttribute="leading" constant="15" id="jOB-Cc-S9u"/>
+                                    <constraint firstItem="NCU-E0-y4h" firstAttribute="leading" secondItem="xtv-nG-3VL" secondAttribute="leading" constant="10" id="jOB-Cc-S9u"/>
                                     <constraint firstItem="Len-Tz-roq" firstAttribute="centerX" secondItem="0ae-eF-hwx" secondAttribute="centerX" id="mXh-W8-seu"/>
                                     <constraint firstItem="0ae-eF-hwx" firstAttribute="leading" secondItem="xtv-nG-3VL" secondAttribute="leading" id="rbR-HN-iVz"/>
                                     <constraint firstAttribute="trailing" secondItem="sIf-7Y-1qG" secondAttribute="trailing" id="tWA-ld-C9z"/>
                                     <constraint firstItem="sIf-7Y-1qG" firstAttribute="top" secondItem="0ae-eF-hwx" secondAttribute="bottom" constant="10" id="vuJ-hn-OZH"/>
+                                    <constraint firstItem="5aK-gW-HWc" firstAttribute="centerX" secondItem="xtv-nG-3VL" secondAttribute="centerX" id="z6Y-fh-dp1"/>
                                     <constraint firstAttribute="bottom" secondItem="sIf-7Y-1qG" secondAttribute="bottom" id="zSq-ee-7BD"/>
                                 </constraints>
                             </view>
@@ -466,12 +474,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="rhh-TO-mb3"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="xfN-Wc-zw4" id="dQR-b2-BLz"/>
                         <outlet property="bannerCollectionView" destination="0ae-eF-hwx" id="v8e-5Q-j0y"/>
                         <outlet property="containerView" destination="xtv-nG-3VL" id="cp6-LQ-M6R"/>
                         <outlet property="descriptionLabel" destination="fjK-l5-erb" id="nCv-vq-VbA"/>
                         <outlet property="leftContainerConstraint" destination="4eh-La-Ttu" id="CnF-PH-oG8"/>
                         <outlet property="pageControl" destination="Len-Tz-roq" id="Fpt-1f-wUS"/>
+                        <outlet property="titleLabel" destination="5aK-gW-HWc" id="Cex-Ec-nJ4"/>
                         <outlet property="trailingContainerConstraint" destination="pjR-Nz-Mj1" id="ce2-ta-Aru"/>
                     </connections>
                 </viewController>

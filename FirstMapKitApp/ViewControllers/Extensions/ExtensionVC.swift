@@ -42,6 +42,5 @@ extension UIViewController {
         
         view.insertSubview(menuController.view, at: 0)
         addChild(menuController)
-    }
-    
+    }    
 }

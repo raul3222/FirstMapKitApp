@@ -92,7 +92,6 @@ extension MapViewController: CLLocationManagerDelegate {
     }
 }
 
-
 private extension MKMapView {
     //MARK: центруем карту на основании координат переданных в метод. regionRadius - что то вроде масштаба
     func centerToLocation(location: CLLocation, regionRadius: CLLocationDistance = 1000) {
