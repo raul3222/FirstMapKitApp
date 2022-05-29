@@ -14,77 +14,55 @@ extension CardCollectionViewController {
         case 0:
             if !isArchPressed {
                 isArchPressed.toggle()
-                for sight in sights {
-                    if sight.type == "architecture" {
-                        filteredSights.append(sight)
-                        chosen.insert(sight.type)
-                    }
-                }
+                filterOn(type: "architecture")
             } else {
                 isArchPressed.toggle()
-                for sight in filteredSights {
-                    if sight.type == "architecture" {
-                        filteredSights.remove(at: filteredSights.firstIndex(of: sight)!)
-                        chosen.remove(sight.type)
-                    }
-                }
+                filterOff(type: "architecture")
             }
         case 1:
             if !isParkPressed {
                 isParkPressed.toggle()
-                for sight in sights {
-                    if sight.type == "park" {
-                        filteredSights.append(sight)
-                        chosen.insert(sight.type)
-                    }
-                }
+                filterOn(type: "park")
             } else {
                 isParkPressed.toggle()
-                for sight in filteredSights {
-                    if sight.type == "park" {
-                        filteredSights.remove(at: filteredSights.firstIndex(of: sight)!)
-                        chosen.remove(sight.type)
-                    }
-                }
+                filterOff(type: "park")
             }
         case 2:
             if !isChurhPressed {
                 isChurhPressed.toggle()
-                for sight in sights {
-                    if sight.type == "church" {
-                        filteredSights.append(sight)
-                        chosen.insert(sight.type)
-                    }
-                }
+                filterOn(type: "church")
             } else {
                 isChurhPressed.toggle()
-                for sight in filteredSights{
-                    if sight.type == "church" {
-                        filteredSights.remove(at: filteredSights.firstIndex(of: sight)!)
-                        chosen.remove(sight.type)
-                    }
-                }
+                filterOff(type: "church")
             }
         case 3:
             if !isMuseumPressed {
                 isMuseumPressed.toggle()
-                for sight in sights {
-                    if sight.type == "museum" {
-                        filteredSights.append(sight)
-                        chosen.insert(sight.type)
-                    }
-                }
+                filterOn(type: "museum")
             } else {
                 isMuseumPressed.toggle()
-                for sight in filteredSights {
-                    if sight.type == "museum" {
-                        filteredSights.remove(at: filteredSights.firstIndex(of: sight)!)
-                        chosen.remove(sight.type)
-                    }
-                }
+                filterOff(type: "museum")
             }
             
         default: print("error")
+        }
+    }
+    
+    private func filterOn(type: String) {
+        for sight in sights {
+            if sight.type == type {
+                filteredSights.append(sight)
+                chosen.insert(sight.type)
+            }
+        }
+    }
+    
+    private func filterOff(type: String) {
+        for sight in filteredSights {
+            if sight.type == type {
+                filteredSights.remove(at: filteredSights.firstIndex(of: sight)!)
+                chosen.remove(sight.type)
+            }
         }
     }
 }

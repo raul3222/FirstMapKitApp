@@ -25,7 +25,7 @@
 		AD54AE65283E544700671FF4 /* FilterItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD54AE64283E544700671FF4 /* FilterItemCollectionViewCell.swift */; };
 		AD54AE67283E7ED500671FF4 /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD54AE66283E7ED500671FF4 /* BannerCollectionViewCell.swift */; };
 		AD6C6CD72842582600363E58 /* CardCollectionViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6C6CD62842582600363E58 /* CardCollectionViewControllerExtension.swift */; };
-		AD6C6CD9284279C000363E58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD6C6CD8284279C000363E58 /* GoogleService-Info.plist */; };
+		AD6C6CE0284281AC00363E58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD6C6CDF284281AC00363E58 /* GoogleService-Info.plist */; };
 		ADB97E2E2837993E0086A9BF /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB97E2D2837993E0086A9BF /* MenuItemCell.swift */; };
 		ADB97E342837AE520086A9BF /* MenuContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB97E332837AE520086A9BF /* MenuContainerViewController.swift */; };
 		ADDC6F432831A346004F5EBA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC6F422831A346004F5EBA /* Constants.swift */; };
@@ -57,7 +57,7 @@
 		AD54AE64283E544700671FF4 /* FilterItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		AD54AE66283E7ED500671FF4 /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		AD6C6CD62842582600363E58 /* CardCollectionViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewControllerExtension.swift; sourceTree = "<group>"; };
-		AD6C6CD8284279C000363E58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "FirstMapKitApp/New Group/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		AD6C6CDF284281AC00363E58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		ADB97E2D2837993E0086A9BF /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
 		ADB97E332837AE520086A9BF /* MenuContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuContainerViewController.swift; sourceTree = "<group>"; };
 		ADDC6F422831A346004F5EBA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -130,8 +130,8 @@
 				AD367F21282C50A100592D0D /* Model */,
 				AD6C6CDA284279CE00363E58 /* AppConfig */,
 				AD6C6CDC28427AAE00363E58 /* Storyboards */,
-				AD6C6CD8284279C000363E58 /* GoogleService-Info.plist */,
 				AD367F14282C47EB00592D0D /* Assets.xcassets */,
+				AD6C6CDF284281AC00363E58 /* GoogleService-Info.plist */,
 				AD6C6CDB28427A9C00363E58 /* Services */,
 			);
 			path = FirstMapKitApp;
@@ -262,7 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD367F18282C47EB00592D0D /* LaunchScreen.storyboard in Resources */,
-				AD6C6CD9284279C000363E58 /* GoogleService-Info.plist in Resources */,
+				AD6C6CE0284281AC00363E58 /* GoogleService-Info.plist in Resources */,
 				AD367F15282C47EB00592D0D /* Assets.xcassets in Resources */,
 				AD367F13282C47E800592D0D /* Main.storyboard in Resources */,
 			);
