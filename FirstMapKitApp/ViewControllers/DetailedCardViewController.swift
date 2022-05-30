@@ -17,7 +17,6 @@ class DetailedCardViewController: UIViewController {
     @IBOutlet weak var leftContainerConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerView: UIView!
 
-    
     var shouldMove = false
     var sight: Sight!
     var imgArray = [
@@ -61,30 +60,17 @@ class DetailedCardViewController: UIViewController {
    
     
     @IBAction func showOnTheMapBtnPressed(_ sender: Any) { }
-    
-//    private func configureView() {
-//        guard let image = sight.imageSrc else { return }
-//        fetchImage(with: image)
-//    }
-    
-//    private func fetchImage(with name: String) {
-//
-//        let url = URL(string: name)
-//        imageView.kf.setImage(with: url)
-//    }
 
 }
 
 extension DetailedCardViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //imgArray.count
         sight.images?.count ?? 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bannerItem", for: indexPath) as! BannerCollectionViewCell
         guard let images = sight.images else { return cell }
-       // guard let image = sight.images[indexPath.row] else { return }
         cell.configureCell(with: images[indexPath.row])
         return cell
     }

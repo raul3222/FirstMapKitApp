@@ -16,6 +16,7 @@ class CardCollectionViewController: UIViewController {
     @IBOutlet weak var cardCollectionView: UICollectionView!
     @IBOutlet weak var leftContainerConstraint: NSLayoutConstraint!
     @IBOutlet weak var trailingContainerConstraint: NSLayoutConstraint!
+    @IBOutlet weak var coverImageView: UIImageView!
     
     var isFiltered = false
     var shouldMove = false
@@ -96,6 +97,7 @@ extension CardCollectionViewController: UICollectionViewDataSource, UICollection
                 } else {
                     cell.configure(with: filteredSights[indexPath.row])
                 }
+                coverImageView.isHidden = true
             }
             return cell
         } else {
@@ -120,8 +122,6 @@ extension CardCollectionViewController: UICollectionViewDataSource, UICollection
         let bottom = cardCollectionView.layer.frame.height / 4
         return UIEdgeInsets(top: 0, left: 0, bottom: bottom, right: 0)
     }
-    
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let detailedVC = segue.destination as? DetailedCardViewController else { return }

@@ -19,7 +19,6 @@
 		AD367F25282C667400592D0D /* SightViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD367F24282C667400592D0D /* SightViews.swift */; };
 		AD367F2B282D71D300592D0D /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD367F2A282D71D200592D0D /* ApiManager.swift */; };
 		AD5016FC2832F9E40032A910 /* DetailedCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5016FB2832F9E40032A910 /* DetailedCardViewController.swift */; };
-		AD5017022833D5070032A910 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5017012833D5070032A910 /* MenuTableViewCell.swift */; };
 		AD501704283446200032A910 /* CardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD501703283446200032A910 /* CardCollectionViewController.swift */; };
 		AD501706283448BC0032A910 /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD501705283448BC0032A910 /* CardViewCell.swift */; };
 		AD54AE65283E544700671FF4 /* FilterItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD54AE64283E544700671FF4 /* FilterItemCollectionViewCell.swift */; };
@@ -29,7 +28,6 @@
 		ADB97E2E2837993E0086A9BF /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB97E2D2837993E0086A9BF /* MenuItemCell.swift */; };
 		ADB97E342837AE520086A9BF /* MenuContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB97E332837AE520086A9BF /* MenuContainerViewController.swift */; };
 		ADDC6F432831A346004F5EBA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC6F422831A346004F5EBA /* Constants.swift */; };
-		ADE926012830305F00F8EDA3 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE926002830305F00F8EDA3 /* ListTableViewController.swift */; };
 		ADE9260428303E5A00F8EDA3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE9260328303E5A00F8EDA3 /* TabBarController.swift */; };
 		FEF6006EDD02DF61BA2E3D2A /* Pods_FirstMapKitApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFEE70C7F68CA340388FD56 /* Pods_FirstMapKitApp.framework */; };
 /* End PBXBuildFile section */
@@ -51,7 +49,6 @@
 		AD367F24282C667400592D0D /* SightViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightViews.swift; sourceTree = "<group>"; };
 		AD367F2A282D71D200592D0D /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		AD5016FB2832F9E40032A910 /* DetailedCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedCardViewController.swift; sourceTree = "<group>"; };
-		AD5017012833D5070032A910 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		AD501703283446200032A910 /* CardCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewController.swift; sourceTree = "<group>"; };
 		AD501705283448BC0032A910 /* CardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
 		AD54AE64283E544700671FF4 /* FilterItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterItemCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -61,7 +58,6 @@
 		ADB97E2D2837993E0086A9BF /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
 		ADB97E332837AE520086A9BF /* MenuContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuContainerViewController.swift; sourceTree = "<group>"; };
 		ADDC6F422831A346004F5EBA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		ADE926002830305F00F8EDA3 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		ADE9260328303E5A00F8EDA3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		EDFEE70C7F68CA340388FD56 /* Pods_FirstMapKitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstMapKitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -177,7 +173,6 @@
 		ADDC6F3928315A1D004F5EBA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AD5017012833D5070032A910 /* MenuTableViewCell.swift */,
 				AD367F24282C667400592D0D /* SightViews.swift */,
 				AD501705283448BC0032A910 /* CardViewCell.swift */,
 				ADB97E2D2837993E0086A9BF /* MenuItemCell.swift */,
@@ -192,7 +187,6 @@
 			children = (
 				AD239F3F283A530F003A599E /* Extensions */,
 				AD367F0F282C47E800592D0D /* MapViewController.swift */,
-				ADE926002830305F00F8EDA3 /* ListTableViewController.swift */,
 				ADE9260328303E5A00F8EDA3 /* TabBarController.swift */,
 				AD5016FB2832F9E40032A910 /* DetailedCardViewController.swift */,
 				AD501703283446200032A910 /* CardCollectionViewController.swift */,
@@ -328,10 +322,8 @@
 				ADE9260428303E5A00F8EDA3 /* TabBarController.swift in Sources */,
 				ADB97E2E2837993E0086A9BF /* MenuItemCell.swift in Sources */,
 				AD367F2B282D71D300592D0D /* ApiManager.swift in Sources */,
-				ADE926012830305F00F8EDA3 /* ListTableViewController.swift in Sources */,
 				AD367F0C282C47E800592D0D /* AppDelegate.swift in Sources */,
 				ADDC6F432831A346004F5EBA /* Constants.swift in Sources */,
-				AD5017022833D5070032A910 /* MenuTableViewCell.swift in Sources */,
 				AD501704283446200032A910 /* CardCollectionViewController.swift in Sources */,
 				AD367F23282C50AB00592D0D /* Sight.swift in Sources */,
 				AD367F0E282C47E800592D0D /* SceneDelegate.swift in Sources */,
