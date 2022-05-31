@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "95A51800-186B-4478-BDCC-8C73D2F99624"
+            uuid = "9D424975-8187-4A8C-BC24-FF3C4BB6A43C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FirstMapKitApp/ViewControllers/MapViewController.swift"
+            filePath = "FirstMapKitApp/ViewControllers/MainViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "locationManager(_:didUpdateLocations:)"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "btnTappedMap(flag:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

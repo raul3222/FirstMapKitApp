@@ -10,10 +10,17 @@ import MapKit
 import Firebase
 import FirebaseFirestore
 
+protocol MapViewControllerDelegate {
+    func btnTappedMap(flag: Bool)
+}
 class MapViewController: UIViewController {
-    var menuController: UIViewController!
+    var delegate: MapViewControllerDelegate?
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var leftConstrait: NSLayoutConstraint!
+    //var menuController: UIViewController!
     @IBOutlet weak var mapView: MKMapView!
-    
+    var shouldMove = false
     let locationManager = CLLocationManager()
     var initialLocation = CLLocation(latitude: 54.7064900, longitude: 20.5109500)
     var isReceived = false
@@ -27,7 +34,7 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad()  {
         super.viewDidLoad()
-
+        //configureSideMenu()
         configureCoreLocation()
         setZoomRange()
         if (sights != nil) && !sights.isEmpty {
@@ -39,8 +46,23 @@ class MapViewController: UIViewController {
     }
     
     @IBAction func currentLocationPressed(_ sender: Any) {
+        print("pressed")
         mapView.centerToLocation(location: initialLocation)
     }
+    
+    @IBAction func menuBtn(_ sender: Any) {
+        print("pressed_menu")
+        if !shouldMove {
+            shouldMove = true
+            delegate?.btnTappedMap(flag: shouldMove)
+            showMenu(view: mapView, leftConstraint: leftConstrait, rightConstraint: trailingConstraint)
+        } else {
+            shouldMove = false
+            delegate?.btnTappedMap(flag: shouldMove)
+            hideMenu(view: mapView, leftConstraint: leftConstrait, rightConstraint: trailingConstraint)
+        }
+    }
+    
 }
 //MARK: Определяем текущие координаты
 extension MapViewController: CLLocationManagerDelegate {

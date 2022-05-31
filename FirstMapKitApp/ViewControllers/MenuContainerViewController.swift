@@ -6,9 +6,11 @@
 //
 
 import UIKit
-
+protocol MenuContainerViewControllerDelegate {
+    func selectedItem(index: Int)
+}
 class MenuContainerViewController: UIViewController {
-
+    var delegate: MenuContainerViewControllerDelegate?
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,7 @@ extension MenuContainerViewController: UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        delegate?.selectedItem(index: indexPath.row)
         
     }
 }

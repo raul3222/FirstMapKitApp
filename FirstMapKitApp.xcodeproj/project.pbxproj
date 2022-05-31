@@ -18,6 +18,7 @@
 		AD367F23282C50AB00592D0D /* Sight.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD367F22282C50AB00592D0D /* Sight.swift */; };
 		AD367F25282C667400592D0D /* SightViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD367F24282C667400592D0D /* SightViews.swift */; };
 		AD367F2B282D71D300592D0D /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD367F2A282D71D200592D0D /* ApiManager.swift */; };
+		AD4FD4A728466A5E000C890F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4FD4A628466A5E000C890F /* MainViewController.swift */; };
 		AD5016FC2832F9E40032A910 /* DetailedCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5016FB2832F9E40032A910 /* DetailedCardViewController.swift */; };
 		AD501704283446200032A910 /* CardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD501703283446200032A910 /* CardCollectionViewController.swift */; };
 		AD501706283448BC0032A910 /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD501705283448BC0032A910 /* CardViewCell.swift */; };
@@ -48,6 +49,7 @@
 		AD367F22282C50AB00592D0D /* Sight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sight.swift; sourceTree = "<group>"; };
 		AD367F24282C667400592D0D /* SightViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightViews.swift; sourceTree = "<group>"; };
 		AD367F2A282D71D200592D0D /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		AD4FD4A628466A5E000C890F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AD5016FB2832F9E40032A910 /* DetailedCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedCardViewController.swift; sourceTree = "<group>"; };
 		AD501703283446200032A910 /* CardCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewController.swift; sourceTree = "<group>"; };
 		AD501705283448BC0032A910 /* CardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				AD5016FB2832F9E40032A910 /* DetailedCardViewController.swift */,
 				AD501703283446200032A910 /* CardCollectionViewController.swift */,
 				ADB97E332837AE520086A9BF /* MenuContainerViewController.swift */,
+				AD4FD4A628466A5E000C890F /* MainViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				ADB97E342837AE520086A9BF /* MenuContainerViewController.swift in Sources */,
 				AD6C6CD72842582600363E58 /* CardCollectionViewControllerExtension.swift in Sources */,
 				AD54AE67283E7ED500671FF4 /* BannerCollectionViewCell.swift in Sources */,
+				AD4FD4A728466A5E000C890F /* MainViewController.swift in Sources */,
 				AD367F10282C47E800592D0D /* MapViewController.swift in Sources */,
 				AD501706283448BC0032A910 /* CardViewCell.swift in Sources */,
 				AD367F20282C508B00592D0D /* Sights.swift in Sources */,

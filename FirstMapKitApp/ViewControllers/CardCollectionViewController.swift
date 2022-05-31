@@ -7,6 +7,9 @@
 
 import UIKit
 
+protocol CardCollectionViewControllerDelegate {
+    func btnTapped(flag: Bool)
+}
 
 class CardCollectionViewController: UIViewController {
     @IBOutlet weak var filterCoverView: UIView!
@@ -17,7 +20,7 @@ class CardCollectionViewController: UIViewController {
     @IBOutlet weak var leftContainerConstraint: NSLayoutConstraint!
     @IBOutlet weak var trailingContainerConstraint: NSLayoutConstraint!
     @IBOutlet weak var coverImageView: UIImageView!
-    
+    var delegate: CardCollectionViewControllerDelegate?
     var isFiltered = false
     var shouldMove = false
     var isReceived = false
@@ -45,7 +48,7 @@ class CardCollectionViewController: UIViewController {
         cardCollectionView.delegate = self
         filterCollectionView.dataSource = self
         filterCollectionView.delegate = self
-        configureSideMenu()
+        //configureSideMenu()
         self.overrideUserInterfaceStyle = .light
         
         let swipeRecognizer = UISwipeGestureRecognizer(
@@ -57,15 +60,18 @@ class CardCollectionViewController: UIViewController {
     @objc private func handleSwipe(sender: UISwipeGestureRecognizer) {
         if shouldMove {
             shouldMove = false
+            delegate?.btnTapped(flag: shouldMove)
             hideMenu(view: containerView, leftConstraint: leftContainerConstraint, rightConstraint: trailingContainerConstraint)
         }
     }
     @IBAction func showMenuButton(_ sender: Any) {
         if !shouldMove {
             shouldMove = true
+            delegate?.btnTapped(flag: shouldMove)
             showMenu(view: containerView, leftConstraint: leftContainerConstraint, rightConstraint: trailingContainerConstraint)
         } else {
             shouldMove = false
+            delegate?.btnTapped(flag: shouldMove)
             hideMenu(view: containerView, leftConstraint: leftContainerConstraint, rightConstraint: trailingContainerConstraint)
         }
     }
