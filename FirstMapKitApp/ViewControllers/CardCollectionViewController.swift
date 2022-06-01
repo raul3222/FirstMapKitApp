@@ -68,11 +68,11 @@ class CardCollectionViewController: UIViewController {
         if !shouldMove {
             shouldMove = true
             delegate?.btnTapped(flag: shouldMove)
-            showMenu(view: containerView, leftConstraint: leftContainerConstraint, rightConstraint: trailingContainerConstraint)
+            //showMenu(view: containerView, leftConstraint: leftContainerConstraint, rightConstraint: trailingContainerConstraint)
         } else {
             shouldMove = false
             delegate?.btnTapped(flag: shouldMove)
-            hideMenu(view: containerView, leftConstraint: leftContainerConstraint, rightConstraint: trailingContainerConstraint)
+            //hideMenu(view: containerView, leftConstraint: leftContainerConstraint, rightConstraint: trailingContainerConstraint)
         }
     }
     

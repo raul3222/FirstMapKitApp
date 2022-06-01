@@ -55,11 +55,11 @@ class MapViewController: UIViewController {
         if !shouldMove {
             shouldMove = true
             delegate?.btnTappedMap(flag: shouldMove)
-            showMenu(view: mapView, leftConstraint: leftConstrait, rightConstraint: trailingConstraint)
+            //showMenu(view: mapView, leftConstraint: leftConstrait, rightConstraint: trailingConstraint)
         } else {
             shouldMove = false
             delegate?.btnTappedMap(flag: shouldMove)
-            hideMenu(view: mapView, leftConstraint: leftConstrait, rightConstraint: trailingConstraint)
+           // hideMenu(view: mapView, leftConstraint: leftConstrait, rightConstraint: trailingConstraint)
         }
     }
     
