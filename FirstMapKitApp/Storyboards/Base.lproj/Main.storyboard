@@ -520,61 +520,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c2a-o7-LBu">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z36-ky-FdY">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <subviews>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z36-ky-FdY">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                    </mapView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDl-lI-aKN">
-                                        <rect key="frame" x="283" y="650" width="72" height="62"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="marker" title=""/>
-                                        <connections>
-                                            <action selector="currentLocationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dlD-HR-bPM"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hC6-sU-sa3">
-                                        <rect key="frame" x="30" y="45" width="80" height="80"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="2Tg-RK-dA2"/>
-                                            <constraint firstAttribute="height" constant="80" id="Ilj-pE-4hG"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="list.bullet" catalog="system"/>
-                                        <connections>
-                                            <action selector="menuBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qLB-Ss-OqZ"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDl-lI-aKN">
+                                <rect key="frame" x="283" y="666" width="72" height="62"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="marker" title=""/>
+                                <connections>
+                                    <action selector="currentLocationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dlD-HR-bPM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hC6-sU-sa3">
+                                <rect key="frame" x="10" y="35" width="80" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Z36-ky-FdY" secondAttribute="trailing" id="AXA-8O-Llm"/>
-                                    <constraint firstAttribute="bottom" secondItem="Z36-ky-FdY" secondAttribute="bottom" id="g9o-2q-ksB"/>
-                                    <constraint firstItem="Z36-ky-FdY" firstAttribute="top" secondItem="c2a-o7-LBu" secondAttribute="top" id="hfj-kI-jxQ"/>
-                                    <constraint firstAttribute="bottom" secondItem="PDl-lI-aKN" secondAttribute="bottom" constant="100" id="jt5-c1-Pp4"/>
-                                    <constraint firstItem="hC6-sU-sa3" firstAttribute="top" secondItem="c2a-o7-LBu" secondAttribute="top" constant="45" id="mYD-8E-EdJ"/>
-                                    <constraint firstItem="hC6-sU-sa3" firstAttribute="leading" secondItem="c2a-o7-LBu" secondAttribute="leading" constant="30" id="mv8-v0-XV1"/>
-                                    <constraint firstAttribute="trailing" secondItem="PDl-lI-aKN" secondAttribute="trailing" constant="20" id="oOH-yN-pTK"/>
-                                    <constraint firstItem="Z36-ky-FdY" firstAttribute="leading" secondItem="c2a-o7-LBu" secondAttribute="leading" id="tLd-MI-xSl"/>
+                                    <constraint firstAttribute="width" constant="80" id="2Tg-RK-dA2"/>
+                                    <constraint firstAttribute="height" constant="80" id="Ilj-pE-4hG"/>
                                 </constraints>
-                            </view>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="list.bullet" catalog="system"/>
+                                <connections>
+                                    <action selector="menuBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qLB-Ss-OqZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="c2a-o7-LBu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="JIx-77-7jf"/>
-                            <constraint firstItem="c2a-o7-LBu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NGB-ds-SVr"/>
-                            <constraint firstItem="c2a-o7-LBu" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="nFL-3Y-TV4"/>
-                            <constraint firstAttribute="top" secondItem="c2a-o7-LBu" secondAttribute="top" id="s63-aQ-hOI"/>
+                            <constraint firstItem="Z36-ky-FdY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7FB-Zj-XdX"/>
+                            <constraint firstItem="hC6-sU-sa3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="HCU-hj-nwr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PDl-lI-aKN" secondAttribute="trailing" constant="20" id="Umm-OU-Xfn"/>
+                            <constraint firstAttribute="bottom" secondItem="Z36-ky-FdY" secondAttribute="bottom" id="dXR-Wy-lt6"/>
+                            <constraint firstItem="Z36-ky-FdY" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="k6Z-IE-c3k"/>
+                            <constraint firstItem="Z36-ky-FdY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="n7U-44-WgZ"/>
+                            <constraint firstItem="hC6-sU-sa3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="35" id="npH-dG-wWp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PDl-lI-aKN" secondAttribute="bottom" constant="50" id="zhR-Gg-JDT"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="map" catalog="system" selectedImage="map" id="BYg-fd-hW0"/>
                     <connections>
-                        <outlet property="containerView" destination="c2a-o7-LBu" id="euH-7A-lK5"/>
-                        <outlet property="leftConstrait" destination="NGB-ds-SVr" id="qsB-h0-Eeb"/>
                         <outlet property="mapView" destination="Z36-ky-FdY" id="hB6-cU-Uqm"/>
-                        <outlet property="trailingConstraint" destination="JIx-77-7jf" id="emA-r7-IE1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
