@@ -90,20 +90,7 @@ class MainViewController: UIViewController,  MenuContainerViewControllerDelegate
                     //view.sendSubviewToBack(menuVc.view)
                     mapVc.shouldMove = false
                     hideMapMenu()
-//                    UIView.animate(withDuration: 0.5,
-//                                   delay: 0,
-//                                   usingSpringWithDamping: 0.8,
-//                                   initialSpringVelocity: 0,
-//                                   options: .curveEaseInOut,
-//                                   animations: {
-//                        self.mapLeadingAnchor = self.mapVc.view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0)
-//                        self.mapTrailngAnchor = self.mapVc.view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0)
-//                        self.menuLeadingAnchor = self.menuVc.view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: -230)
-//                        self.menuLeadingAnchor?.isActive = true
-//                        self.mapLeadingAnchor?.isActive = true
-//                        self.mapTrailngAnchor?.isActive = true
-//                        self.view.layoutIfNeeded()
-//                    }) { (finished) in }
+
                     break
                 } else {
                     mapVc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MapViewController") as? MapViewController
@@ -131,20 +118,7 @@ class MainViewController: UIViewController,  MenuContainerViewControllerDelegate
                 mapLeadingAnchor?.isActive = false
                 mapTrailngAnchor?.isActive = false
                 hideMapMenu()
-//                UIView.animate(withDuration: 0.5,
-//                               delay: 0,
-//                               usingSpringWithDamping: 0.8,
-//                               initialSpringVelocity: 0,
-//                               options: .curveEaseInOut,
-//                               animations: {
-//                    self.mapLeadingAnchor = self.mapVc.view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0)
-//                    self.mapTrailngAnchor = self.mapVc.view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0)
-//                    self.menuLeadingAnchor = self.menuVc.view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: -230)
-//                    self.menuLeadingAnchor?.isActive = true
-//                    self.mapLeadingAnchor?.isActive = true
-//                    self.mapTrailngAnchor?.isActive = true
-//                    self.view.layoutIfNeeded()
-//                }) { (finished) in }
+
                 break
             }
             
@@ -212,6 +186,8 @@ class MainViewController: UIViewController,  MenuContainerViewControllerDelegate
                        animations: {
             self.cardLeadingAnchor = self.cardVc.view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0)
             self.cardTrailingAnchor = self.cardVc.view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0)
+            self.cardVc.view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+            self.cardVc.view.topAnchor.constraint(equalTo:  self.view.topAnchor).isActive = true
             self.menuLeadingAnchor = self.menuVc.view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: -230)
             self.menuLeadingAnchor?.isActive = true
             self.cardLeadingAnchor?.isActive = true

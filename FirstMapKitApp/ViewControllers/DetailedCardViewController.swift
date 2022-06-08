@@ -31,7 +31,7 @@ class DetailedCardViewController: UIViewController {
         titleLabel.text = sight.title
         bannerCollectionView.dataSource = self
         bannerCollectionView.delegate = self
-        configureSideMenu()
+        //configureSideMenu()
         let swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.handleSwipe))
         swipeRecognizer.direction = .left
         view.addGestureRecognizer(swipeRecognizer)
@@ -44,16 +44,16 @@ class DetailedCardViewController: UIViewController {
     @objc private func handleSwipe(sender: UISwipeGestureRecognizer) {
         if shouldMove {
             shouldMove = false
-            hideMenu(view: containerView, leftConstraint: leftContainerConstraint, rightConstraint: trailingContainerConstraint)
+           // hideMenu(view: containerView, leftConstraint: leftContainerConstraint, rightConstraint: trailingContainerConstraint)
         }
     }
     @IBAction func showMenuButton(_ sender: Any) {
         if !shouldMove {
             shouldMove = true
-            showMenu(view: containerView, leftConstraint: leftContainerConstraint, rightConstraint: trailingContainerConstraint)
+           // showMenu(view: containerView, leftConstraint: leftContainerConstraint, rightConstraint: trailingContainerConstraint)
         } else {
             shouldMove = false
-            hideMenu(view: containerView, leftConstraint: leftContainerConstraint, rightConstraint: trailingContainerConstraint)
+           // hideMenu(view: containerView, leftConstraint: leftContainerConstraint, rightConstraint: trailingContainerConstraint)
         }
     }
     

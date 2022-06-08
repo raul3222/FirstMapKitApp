@@ -61,7 +61,7 @@ class CardCollectionViewController: UIViewController {
         if shouldMove {
             shouldMove = false
             delegate?.btnTapped(flag: shouldMove)
-            hideMenu(view: containerView, leftConstraint: leftContainerConstraint, rightConstraint: trailingContainerConstraint)
+            //hideMenu(view: containerView, leftConstraint: leftContainerConstraint, rightConstraint: trailingContainerConstraint)
         }
     }
     @IBAction func showMenuButton(_ sender: Any) {
@@ -115,9 +115,10 @@ extension CardCollectionViewController: UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let size = collectionView.frame.size
         if collectionView == cardCollectionView {
-            let height = collectionView.layer.frame.height / 1.4
-            return CGSize(width: Constants.cardItemWidth / 1.3, height: height)
+            //let height = collectionView.layer.frame.height / 1.4
+            return CGSize(width: size.width / 1.3, height: size.height)
         } else {
             return CGSize(width: 90, height: 90)
             
@@ -126,8 +127,16 @@ extension CardCollectionViewController: UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         let bottom = cardCollectionView.layer.frame.height / 4
-        return UIEdgeInsets(top: 0, left: 0, bottom: bottom, right: 0)
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
+    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        10.0
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//        10.0
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let detailedVC = segue.destination as? DetailedCardViewController else { return }
