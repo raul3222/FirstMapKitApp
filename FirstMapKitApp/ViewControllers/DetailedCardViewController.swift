@@ -17,7 +17,6 @@ class DetailedCardViewController: UIViewController {
     @IBOutlet weak var leftContainerConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerView: UIView!
 
-    var shouldMove = false
     var sight: Sight!
     var imgArray = [
         UIImage(named: "cathedral-1"),
@@ -31,7 +30,6 @@ class DetailedCardViewController: UIViewController {
         titleLabel.text = sight.title
         bannerCollectionView.dataSource = self
         bannerCollectionView.delegate = self
-        //configureSideMenu()
         let swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.handleSwipe))
         swipeRecognizer.direction = .left
         view.addGestureRecognizer(swipeRecognizer)
@@ -42,21 +40,8 @@ class DetailedCardViewController: UIViewController {
         
     }
     @objc private func handleSwipe(sender: UISwipeGestureRecognizer) {
-        if shouldMove {
-            shouldMove = false
-           // hideMenu(view: containerView, leftConstraint: leftContainerConstraint, rightConstraint: trailingContainerConstraint)
-        }
+     
     }
-    @IBAction func showMenuButton(_ sender: Any) {
-        if !shouldMove {
-            shouldMove = true
-           // showMenu(view: containerView, leftConstraint: leftContainerConstraint, rightConstraint: trailingContainerConstraint)
-        } else {
-            shouldMove = false
-           // hideMenu(view: containerView, leftConstraint: leftContainerConstraint, rightConstraint: trailingContainerConstraint)
-        }
-    }
-    
    
     
     @IBAction func showOnTheMapBtnPressed(_ sender: Any) { }

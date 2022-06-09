@@ -213,6 +213,7 @@
                                     <mask key="subviews">
                                         <exclude reference="C4z-HQ-IUT"/>
                                         <exclude reference="nYF-zb-bdU"/>
+                                        <exclude reference="peU-kn-RMM"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -253,18 +254,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xtv-nG-3VL">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1d-5P-6Ze">
-                                        <rect key="frame" x="8" y="81" width="81" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="81" id="6eG-9c-Y0P"/>
-                                            <constraint firstAttribute="height" constant="40" id="751-Ul-7Zv"/>
-                                        </constraints>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="list.dash" catalog="system"/>
-                                        <connections>
-                                            <action selector="showMenuButton:" destination="QLQ-wo-PIX" eventType="touchUpInside" id="Dz6-nI-kTe"/>
-                                        </connections>
-                                    </button>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sIf-7Y-1qG">
                                         <rect key="frame" x="0.0" y="340" width="375" height="472"/>
                                         <subviews>
@@ -363,12 +352,10 @@
                                 <constraints>
                                     <constraint firstItem="5aK-gW-HWc" firstAttribute="top" secondItem="xtv-nG-3VL" secondAttribute="top" constant="59" id="2pg-dL-nOi"/>
                                     <constraint firstAttribute="trailing" secondItem="0ae-eF-hwx" secondAttribute="trailing" id="7G9-Xa-znh"/>
-                                    <constraint firstItem="N1d-5P-6Ze" firstAttribute="leading" secondItem="xtv-nG-3VL" secondAttribute="leading" constant="8" id="F8B-FL-3Cl"/>
                                     <constraint firstItem="sIf-7Y-1qG" firstAttribute="leading" secondItem="xtv-nG-3VL" secondAttribute="leading" id="Rbg-xp-sr4"/>
                                     <constraint firstItem="NCU-E0-y4h" firstAttribute="top" secondItem="xtv-nG-3VL" secondAttribute="top" constant="30" id="S8B-tF-pZ7"/>
                                     <constraint firstItem="0ae-eF-hwx" firstAttribute="bottom" secondItem="Len-Tz-roq" secondAttribute="bottom" constant="1" id="Vsd-mv-mqc"/>
-                                    <constraint firstItem="0ae-eF-hwx" firstAttribute="top" secondItem="N1d-5P-6Ze" secondAttribute="bottom" constant="5" id="dHB-q7-bbT"/>
-                                    <constraint firstItem="N1d-5P-6Ze" firstAttribute="top" secondItem="NCU-E0-y4h" secondAttribute="bottom" constant="1" id="hXy-6A-W0V"/>
+                                    <constraint firstItem="0ae-eF-hwx" firstAttribute="top" secondItem="5aK-gW-HWc" secondAttribute="bottom" constant="41.666666666666657" id="iJc-Mn-0oJ"/>
                                     <constraint firstItem="NCU-E0-y4h" firstAttribute="leading" secondItem="xtv-nG-3VL" secondAttribute="leading" constant="10" id="jOB-Cc-S9u"/>
                                     <constraint firstItem="Len-Tz-roq" firstAttribute="centerX" secondItem="0ae-eF-hwx" secondAttribute="centerX" id="mXh-W8-seu"/>
                                     <constraint firstItem="0ae-eF-hwx" firstAttribute="leading" secondItem="xtv-nG-3VL" secondAttribute="leading" id="rbR-HN-iVz"/>
@@ -544,7 +531,6 @@
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="kaliningrad" width="600" height="800"/>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
-        <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="list.triangle" catalog="system" width="128" height="91"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="marker" width="48" height="48"/>

@@ -9,6 +9,7 @@ import UIKit
 import Kingfisher
 
 class CardViewCell: UICollectionViewCell {
+    @IBOutlet weak var favouriteBtn: UIButton!
     @IBOutlet weak var cardTitleLabel: UILabel!
     @IBOutlet weak var cardImage: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!

@@ -76,6 +76,7 @@ class CardCollectionViewController: UIViewController {
         }
     }
     
+   
     @IBAction func unwind(for segue: UIStoryboardSegue) { }
 }
 
@@ -118,7 +119,7 @@ extension CardCollectionViewController: UICollectionViewDataSource, UICollection
         let size = collectionView.frame.size
         if collectionView == cardCollectionView {
             //let height = collectionView.layer.frame.height / 1.4
-            return CGSize(width: size.width / 1.3, height: size.height)
+            return CGSize(width: size.width / 1.3, height: size.height / 1.4)
         } else {
             return CGSize(width: 90, height: 90)
             
@@ -127,16 +128,9 @@ extension CardCollectionViewController: UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         let bottom = cardCollectionView.layer.frame.height / 4
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        return UIEdgeInsets(top: 0, left: 0, bottom: bottom, right: 0)
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        10.0
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//        10.0
-//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let detailedVC = segue.destination as? DetailedCardViewController else { return }
@@ -149,6 +143,23 @@ extension CardCollectionViewController: UICollectionViewDataSource, UICollection
             detailedVC.sight = sight
         }
     }
+    
+//    @IBAction func favouriteBtn(_ sender: UIButton) {
+//        var superview = sender.superview
+//        while let view = superview, !(view is UICollectionViewCell) {
+//            superview = view.superview
+//        }
+//
+//        guard let cell = superview as? UICollectionViewCell else {return}
+//        guard let indexPath = cardCollectionView.indexPath(for: cell) else {return}
+//        sender.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+//        sender.tintColor = .red
+//        //collectionView(cardCollectionView, didSelectItemAt: indexPath)
+//        var indexPaths = [IndexPath]()
+//        indexPaths.append(indexPath)
+//        cardCollectionView.reloadItems(at: indexPaths)
+//
+//    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == filterCollectionView {

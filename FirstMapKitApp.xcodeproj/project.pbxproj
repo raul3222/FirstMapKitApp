@@ -29,7 +29,6 @@
 		ADB97E2E2837993E0086A9BF /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB97E2D2837993E0086A9BF /* MenuItemCell.swift */; };
 		ADB97E342837AE520086A9BF /* MenuContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB97E332837AE520086A9BF /* MenuContainerViewController.swift */; };
 		ADDC6F432831A346004F5EBA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC6F422831A346004F5EBA /* Constants.swift */; };
-		ADE9260428303E5A00F8EDA3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE9260328303E5A00F8EDA3 /* TabBarController.swift */; };
 		FEF6006EDD02DF61BA2E3D2A /* Pods_FirstMapKitApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFEE70C7F68CA340388FD56 /* Pods_FirstMapKitApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +59,6 @@
 		ADB97E2D2837993E0086A9BF /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
 		ADB97E332837AE520086A9BF /* MenuContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuContainerViewController.swift; sourceTree = "<group>"; };
 		ADDC6F422831A346004F5EBA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		ADE9260328303E5A00F8EDA3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		EDFEE70C7F68CA340388FD56 /* Pods_FirstMapKitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstMapKitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -189,7 +187,6 @@
 			children = (
 				AD239F3F283A530F003A599E /* Extensions */,
 				AD367F0F282C47E800592D0D /* MapViewController.swift */,
-				ADE9260328303E5A00F8EDA3 /* TabBarController.swift */,
 				AD5016FB2832F9E40032A910 /* DetailedCardViewController.swift */,
 				AD501703283446200032A910 /* CardCollectionViewController.swift */,
 				ADB97E332837AE520086A9BF /* MenuContainerViewController.swift */,
@@ -323,7 +320,6 @@
 				AD367F10282C47E800592D0D /* MapViewController.swift in Sources */,
 				AD501706283448BC0032A910 /* CardViewCell.swift in Sources */,
 				AD367F20282C508B00592D0D /* Sights.swift in Sources */,
-				ADE9260428303E5A00F8EDA3 /* TabBarController.swift in Sources */,
 				ADB97E2E2837993E0086A9BF /* MenuItemCell.swift in Sources */,
 				AD367F2B282D71D300592D0D /* ApiManager.swift in Sources */,
 				AD367F0C282C47E800592D0D /* AppDelegate.swift in Sources */,
